@@ -2,9 +2,8 @@ import React from 'react';
 import Intro from '@/components/Intro/Intro';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import MyStack from '@/components/MyStack/MyStack';
-import Experience from '@/components/Experience/Experience';
-import MyProjects from '@/components/MyProjects/MyProjects';
 import Resume from '@/components/Resume/Resume';
+import MyWork from '@/components/MyWork/MyWork';
 
 export default function Home() {
     return (
@@ -19,10 +18,7 @@ export default function Home() {
                 <MyStack />
             </section>
             <section className="h-screen w-full">
-                <Experience />
-            </section>
-            <section className="h-screen w-full">
-                <MyProjects />
+                <MyWork />
             </section>
             <section className="h-screen w-full">
                 <Resume />

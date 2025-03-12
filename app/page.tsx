@@ -1,9 +1,9 @@
 import React from 'react';
-import Intro from '../components/Intro';
-import AboutMe from '../components/AboutMe';
-import MyStack from '../components/MyStack';
-import MyProjects from '../components/MyProjects';
-import Resume from '../components/Resume';
+import Intro from '@/components/Intro/Intro';
+import AboutMe from '@/components/AboutMe/AboutMe';
+import MyStack from '@/components/MyStack/MyStack';
+import MyProjects from '@/components/MyProjects/MyProjects';
+import Resume from '@/components/Resume/Resume';
 
 export default function Home() {
     return (

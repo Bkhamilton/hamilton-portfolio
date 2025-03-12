@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyProjects = () => {
     return (
-        <section className="h-screen flex items-center justify-center bg-gray-100 w-full">
+        <section className="h-screen flex items-center bg-gradient-to-b from-gray-500 to-gray-600 justify-center bg-gray-100 w-full">
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">My Projects</h2>
                 <p className="text-lg">

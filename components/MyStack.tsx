@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyStack = () => {
     return (
-        <section className="flex items-center justify-center h-screen bg-gray-100">
+        <section className="flex items-center justify-center h-screen bg-gray-100 w-full">
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">My Tech Stack</h2>
                 <p className="text-lg">

@@ -3,7 +3,7 @@ import TechStackBox from './TechStackBox';
 
 const MyStack = () => {
     return (
-        <section className="flex items-center bg-gradient-to-b from-gray-600 to-gray-500 justify-center h-screen bg-gray-100 w-full">
+        <section className="flex items-center bg-gradient-to-b from-gray-700 to-gray-600 justify-center h-screen bg-gray-100 w-full">
             <div className="flex w-full max-w-6xl mx-auto p-8">
                 <div className="w-1/3 text-left">
                     <h2 className="text-4xl font-bold mb-4">My Tech Stack</h2>
@@ -11,7 +11,7 @@ const MyStack = () => {
                 <div className="w-2/3 text-left">
                     <TechStackBox 
                         type="Front End" 
-                        technologies={["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"]} 
+                        technologies={["JavaScript", "TypeScript", "React", "React Native", "Python", "Next.js", "Tailwind CSS"]} 
                     />
                     <TechStackBox 
                         type="Back End" 
@@ -19,11 +19,11 @@ const MyStack = () => {
                     />
                     <TechStackBox 
                         type="Database" 
-                        technologies={["MongoDB", "PostgreSQL"]} 
+                        technologies={["MongoDB", "PostgreSQL", "MySQL"]} 
                     />
                     <TechStackBox 
                         type="Tools" 
-                        technologies={["Git", "Docker", "Webpack"]} 
+                        technologies={["Git", "AWS", "Tableau"]} 
                     />
                 </div>
             </div>

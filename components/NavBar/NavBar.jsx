@@ -4,7 +4,7 @@ import '../../app/globals.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../constants/images/logo.png'
+import logo from '@/constants/images/logo.PNG'
 import MenuPopup from './MenuPopup/MenuPopup';
 
 export default function NavBar() {

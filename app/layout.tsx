@@ -24,10 +24,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                {children}
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                <div className="flex">
+                    <div className="fixed top-50 left-0 h-full w-25 bg-transparent text-white p-4 flex flex-col justify-between">
+                        {/* Your pinned component content here */}
+                        <div className="flex flex-col items-center">
+                            <p className="transform rotate-90 origin-bottom-left whitespace-nowrap">bkhamilton310@gmail.com</p>
+                        </div>
+                    </div>
+                    <div className="ml-1/4 w-full">
+                        {children}
+                    </div>
+                </div>
             </body>
         </html>
     );

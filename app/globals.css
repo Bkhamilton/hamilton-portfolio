@@ -63,3 +63,22 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c7c7c7;
+}

@@ -8,19 +8,19 @@ import Resume from '../components/Resume';
 export default function Home() {
     return (
         <div className="overflow-y-scroll">
-            <section className="h-screen">
+            <section className="h-screen w-full">
                 <Intro />
             </section>
-            <section className="h-screen">
+            <section className="h-screen w-full">
                 <AboutMe />
             </section>
-            <section className="h-screen">
+            <section className="h-screen w-full">
                 <MyStack />
             </section>
-            <section className="h-screen">
+            <section className="h-screen w-full">
                 <MyProjects />
             </section>
-            <section className="h-screen">
+            <section className="h-screen w-full">
                 <Resume />
             </section>
         </div>

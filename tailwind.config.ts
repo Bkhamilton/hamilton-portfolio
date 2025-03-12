@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      height: {
+        screen: "100vh",
+        'full-vh': "100vh",
+      }
     },
   },
   plugins: [],

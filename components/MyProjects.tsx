@@ -6,7 +6,7 @@ const MyProjects = () => {
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">My Projects</h2>
                 <p className="text-lg">
-                    Here are some of the projects I've worked on:
+                    Here are some of the projects I have worked on:
                 </p>
                 <ul className="mt-6 space-y-4">
                     <li className="border p-4 rounded shadow">

@@ -4,11 +4,11 @@ import Projects from '@/components/MyWork/Projects/Projects';
 
 const MyWork = () => {
     return (
-        <section className="h-screen w-full flex bg-gradient-to-b from-gray-600 to-gray-500 items-center justify-center bg-gray-100">
-            <div className="w-1/2 h-full">
+        <section className="h-screen w-full flex flex-col md:flex-row bg-gradient-to-b from-gray-600 to-gray-500 items-center justify-center bg-gray-100">
+            <div className="w-full md:w-1/2 h-full">
                 <Experience />
             </div>
-            <div className="w-1/2 h-full">
+            <div className="w-full md:w-1/2 h-full">
                 <Projects />
             </div>
         </section>

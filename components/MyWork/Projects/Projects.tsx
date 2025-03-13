@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectBox from './ProjectBox';
 
 const Projects = () => {
     return (
@@ -9,18 +10,21 @@ const Projects = () => {
                     Here are some of the projects I have worked on:
                 </p>
                 <ul className="mt-6 space-y-4">
-                    <li className="border p-4 rounded shadow">
-                        <h3 className="text-xl font-semibold">Project 1</h3>
-                        <p>A brief description of Project 1.</p>
-                    </li>
-                    <li className="border p-4 rounded shadow">
-                        <h3 className="text-xl font-semibold">Project 2</h3>
-                        <p>A brief description of Project 2.</p>
-                    </li>
-                    <li className="border p-4 rounded shadow">
-                        <h3 className="text-xl font-semibold">Project 3</h3>
-                        <p>A brief description of Project 3.</p>
-                    </li>
+                    <ProjectBox
+                        projectName="Project 1"
+                        date="2021"
+                        projectDescription="This is a project I worked on in 2021."
+                    />
+                    <ProjectBox
+                        projectName="Project 2"
+                        date="2020"
+                        projectDescription="This is a project I worked on in 2020."
+                    />
+                    <ProjectBox
+                        projectName="Project 3"
+                        date="2019"
+                        projectDescription="This is a project I worked on in 2019."
+                    />
                 </ul>
             </div>
         </section>

@@ -23,6 +23,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
                 <div className="absolute left-0 mt-2 p-4 bg-white border border-gray-300 shadow-lg z-10 w-64">
                     <img src="/placeholder-image.png" alt="Project" className="w-full h-32 object-cover mb-2" />
                     <p className="text-sm">{projectDescription}</p>
+                    <p className="text-xs text-gray-500 mt-2">{date}</p>
                 </div>
             )}
         </div>

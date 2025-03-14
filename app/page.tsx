@@ -3,7 +3,6 @@ import Intro from '@/components/Intro/Intro';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import MyStack from '@/components/MyStack/MyStack';
 import Resume from '@/components/Resume/Resume';
-import MyWork from '@/components/MyWork/MyWork';
 import Experience from '@/components/MyWork/Experience/Experience';
 import Projects from '@/components/MyWork/Projects/Projects';
 

@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface ProjectBoxProps {
     projectName: string;
@@ -21,7 +22,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
             </h3>
             {isHovered && (
                 <div className="absolute left-0 mt-2 p-4 bg-white border border-gray-300 shadow-lg z-10 w-64">
-                    <img src="/placeholder-image.png" alt="Project" className="w-full h-32 object-cover mb-2" />
+                    <Image
+                        src="/placeholder-image.png"
+                        alt="Project"
+                        width={256}
+                        height={128}
+                        className="w-full h-32 object-cover mb-2"
+                    />
                     <p className="text-sm">{projectDescription}</p>
                     <p className="text-xs text-gray-500 mt-2">{date}</p>
                 </div>

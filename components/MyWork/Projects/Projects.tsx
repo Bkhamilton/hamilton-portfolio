@@ -9,21 +9,26 @@ const Projects = () => {
                 <p className="text-lg">
                     Here are some of the projects I have worked on:
                 </p>
-                <ul className="mt-6 space-y-4">
+                <ul className="mt-6">
                     <ProjectBox
-                        projectName="Project 1"
-                        date="2021"
-                        projectDescription="This is a project I worked on in 2021."
+                        projectName="BetSmarter"
+                        date="2024-Present"
+                        projectDescription="A web application for smarter betting strategies."
                     />
                     <ProjectBox
-                        projectName="Project 2"
-                        date="2020"
-                        projectDescription="This is a project I worked on in 2020."
+                        projectName="Game Library"
+                        date="2025"
+                        projectDescription='A library of mobile games for iOS and Android, built with React Native.'
                     />
                     <ProjectBox
-                        projectName="Project 3"
-                        date="2019"
-                        projectDescription="This is a project I worked on in 2019."
+                        projectName='BudJournal'
+                        date='2024'
+                        projectDescription='A journal application for tracking cannabis strains and effects, built with React and Firebase.'
+                    />
+                    <ProjectBox
+                        projectName='Chloe Goodman Hair'
+                        date='2025'
+                        projectDescription='A personal website for a hair stylist, showcasing her portfolio and services.'
                     />
                 </ul>
             </div>

@@ -2,14 +2,14 @@ import React from 'react';
 import Service from './Service';
 import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa'; // Example icons from React Icons
 
-const AboutMe = () => {
+const Services = () => {
     return (
         <section className="h-screen flex flex-col bg-gradient-to-b from-gray-800 to-gray-700 items-center justify-center bg-gray-100 w-full px-8">
             <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4">My Services</h2>
                 <p className="text-lg text-gray-200">
-                    I am a passionate developer with a love for creating dynamic and responsive web applications.
-                    My journey in tech has equipped me with a diverse skill set and a keen eye for detail.
+                    I offer a range of services to help you build and enhance your online presence. 
+                    Whether you need a stunning website, a mobile app, or a content management system, I've got you covered.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
@@ -48,4 +48,4 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
+export default Services;

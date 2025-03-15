@@ -1,6 +1,6 @@
 import React from 'react';
 import Intro from '@/components/Intro/Intro';
-import AboutMe from '@/components/AboutMe/AboutMe';
+import Services from '@/components/Services/Services';
 import MyStack from '@/components/MyStack/MyStack';
 import Resume from '@/components/Resume/Resume';
 import Experience from '@/components/MyWork/Experience/Experience';
@@ -13,7 +13,7 @@ export default function Home() {
                 <Intro />
             </section>
             <section id="about-me" className="h-screen w-full">
-                <AboutMe />
+                <Services />
             </section>
             <section id="my-stack" className="h-screen w-full">
                 <MyStack />

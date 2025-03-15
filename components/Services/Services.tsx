@@ -9,7 +9,7 @@ const Services = () => {
                 <h2 className="text-4xl font-bold mb-4">My Services</h2>
                 <p className="text-lg text-gray-200">
                     I offer a range of services to help you build and enhance your online presence. 
-                    Whether you need a stunning website, a mobile app, or a content management system, I've got you covered.
+                    Whether you need a stunning website, a mobile app, or a content management system, I&apos;ve got you covered.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">

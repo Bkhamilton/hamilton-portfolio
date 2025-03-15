@@ -18,14 +18,29 @@ export default function Home() {
             <section id="my-stack" className="h-screen w-full">
                 <MyStack />
             </section>
-            <section id="my-work" className="h-screen w-full flex flex-col md:flex-row bg-gradient-to-b from-gray-600 to-gray-500 items-center justify-center">
-                <div className="w-full md:w-1/2 h-full">
+
+            {/* Phone Layout */}
+            <div className="block md:hidden">
+                <section id="experience" className="h-screen w-full">
                     <Experience />
-                </div>
-                <div className="w-full md:w-1/2 h-full">
+                </section>
+                <section id="projects" className="h-screen w-full">
                     <Projects />
-                </div>
-            </section>
+                </section>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden md:block">
+                <section id="my-work" className="h-screen w-full flex flex-col md:flex-row bg-gradient-to-b from-gray-600 to-gray-500 items-center justify-center">
+                    <div className="w-full md:w-1/2 h-full">
+                        <Experience />
+                    </div>
+                    <div className="w-full md:w-1/2 h-full">
+                        <Projects />
+                    </div>
+                </section>
+            </div>
+
             <section id="resume" className="h-screen w-full">
                 <Resume />
             </section>

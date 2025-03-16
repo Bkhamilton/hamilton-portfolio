@@ -1,6 +1,7 @@
 import React from 'react';
 import Service from './Service';
 import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa'; // Example icons from React Icons
+import { BsDatabase, BsDatabaseFill } from "react-icons/bs";
 
 const Services = () => {
     return (
@@ -21,7 +22,7 @@ const Services = () => {
                 <Service
                     title="Back End Development"
                     description="Creating robust server-side applications."
-                    icon={<FaMobileAlt />}
+                    icon={<BsDatabaseFill />}
                 />
                 <Service
                     title="Web Development"
@@ -36,7 +37,7 @@ const Services = () => {
                 <Service
                     title="Content Management (CMS)"
                     description="Managing and optimizing content for websites."
-                    icon={<FaPaintBrush />}
+                    icon={<BsDatabase />}
                 />
                 <Service
                     title="UI/UX Design"

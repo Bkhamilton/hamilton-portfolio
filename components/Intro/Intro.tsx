@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 const Intro = () => {
     const handleScroll = () => {
@@ -23,13 +24,13 @@ const Intro = () => {
                     <div className="flex justify-center md:justify-start mt-6 space-x-4">
                         {/* Icons */}
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400">
-                            <i className="fab fa-linkedin"></i> {/* Replace with actual LinkedIn icon */}
+                            <AiFillLinkedin /> {/* LinkedIn icon from react-icons */}
                         </a>
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400">
-                            <i className="fab fa-github"></i> {/* Replace with actual GitHub icon */}
+                            <AiFillGithub /> {/* GitHub icon from react-icons */}
                         </a>
                         <a href="mailto:bkhamilton310@gmail.com" className="text-2xl hover:text-red-400">
-                            <i className="fas fa-envelope"></i> {/* Replace with actual Email icon */}
+                            <AiFillMail /> {/* Mail icon from react-icons */}
                         </a>
                     </div>
                 </div>

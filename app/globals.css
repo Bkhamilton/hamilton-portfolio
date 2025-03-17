@@ -66,17 +66,16 @@ a:hover {
 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #303030;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #a1a1a1;
-  border-radius: 6px;
-  margin-right: 4px;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

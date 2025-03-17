@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectBoxProps {
     projectName: string;
@@ -13,13 +14,15 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
 
     return (
         <div className="relative mb-8">
-            <h3
-                className="text-2xl font-bold text-left cursor-pointer"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                {projectName}
-            </h3>
+            <Link href={`/my-projects/${encodeURIComponent(projectName)}`}>
+                <h3
+                    className="text-2xl font-bold text-left cursor-pointer"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    {projectName}
+                </h3>
+            </Link>
             {isHovered && (
                 <div className="absolute left-0 mt-2 p-4 bg-white border border-gray-300 shadow-lg z-10 w-64">
                     <Image

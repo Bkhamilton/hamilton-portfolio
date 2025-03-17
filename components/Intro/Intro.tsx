@@ -11,7 +11,7 @@ const Intro = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-between h-screen bg-black text-white w-full">
+        <section className="flex flex-col items-center justify-between h-screen text-white w-full">
             {/* Main Content */}
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full px-8">
                 {/* Section A */}

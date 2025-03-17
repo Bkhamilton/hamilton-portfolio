@@ -3,7 +3,7 @@ import WorkExperience from './WorkExperience';
 
 const Experience = () => {
     return (
-        <section className="h-screen flex bg-black items-center justify-center w-full">
+        <section className="h-screen flex items-center justify-center w-full">
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">My Work Experience</h2>
                 <WorkExperience 

@@ -31,7 +31,7 @@ export default function Home() {
 
             {/* Desktop Layout */}
             <div className="hidden md:block">
-                <section id="my-work" className="h-screen w-full flex flex-col md:flex-row bg-gradient-to-b from-gray-600 to-gray-500 items-center justify-center">
+                <section id="my-work" className="h-screen w-full flex flex-col md:flex-row items-center justify-center">
                     <div className="w-full md:w-1/2 h-full">
                         <Experience />
                     </div>

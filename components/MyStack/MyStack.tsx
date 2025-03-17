@@ -3,7 +3,7 @@ import TechStackBox from './TechStackBox';
 
 const MyStack = () => {
     return (
-        <section className="flex items-center justify-center h-screen bg-black w-full">
+        <section className="flex items-center justify-center h-screen w-full">
             <div className="flex flex-col w-full max-w-6xl mx-auto p-8">
                 {/* Heading Section */}
                 <div className="text-left mb-8">

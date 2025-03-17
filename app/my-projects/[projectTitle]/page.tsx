@@ -12,7 +12,7 @@ interface Project {
 }
 
 interface ProjectParams {
-    projectTitle: string;
+    projectTitle: Promise<string>;
 }
 
 // Define the list of projects and their details

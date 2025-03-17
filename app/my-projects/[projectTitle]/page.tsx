@@ -5,8 +5,8 @@ interface ProjectParams {
     projectTitle: string;
 }
 
-const ProjectDetails = ({ params }: { params: ProjectParams }) => {
-    const { projectTitle } = params;
+const ProjectDetails = async ({ params }: { params: Promise<ProjectParams> }) => {
+    const { projectTitle } = await params; // Await the params to resolve
 
     // Example data for demonstration purposes
     const projectData = {

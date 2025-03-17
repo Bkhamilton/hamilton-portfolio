@@ -29,7 +29,14 @@ export default function RootLayout({
                     <div className="fixed top-50 left-0 h-full w-25 bg-transparent text-white p-2 flex flex-col justify-between">
                         {/* Your pinned component content here */}
                         <div className="flex flex-col items-center">
-                            <p className="transform rotate-90 origin-bottom-left whitespace-nowrap">bkhamilton310@gmail.com</p>
+                            <a
+                                href="mailto:bkhamilton310@gmail.com?subject=Hello%20Ben&body=Hi%20Ben,%0D%0A%0D%0AI'm%20reaching%20out%20to%20connect%20with%20you."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transform rotate-90 origin-bottom-left whitespace-nowrap hover:underline"
+                            >
+                                bkhamilton310@gmail.com
+                            </a>
                         </div>
                     </div>
                     <div className="ml-1/4 w-full">

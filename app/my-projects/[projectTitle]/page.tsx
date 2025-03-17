@@ -1,15 +1,22 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
+interface Project {
+    date: string;
+    description: string;
+    longDescription: string;
+    link: string;
+    image: string;
+}
+
 interface ProjectParams {
     projectTitle: string;
 }
 
-const ProjectDetails = async ({ params }: { params: Promise<ProjectParams> }) => {
-    const { projectTitle } = await params; // Await the params to resolve
+const ProjectDetails = async ({ params }: { params: ProjectParams }) => {
+    const { projectTitle } = params;
 
-    // Example data for demonstration purposes
-    const projectData = {
+    const projectData: Record<string, Project> = {
         "BetSmarter": {
             date: "2024-Present",
             description: "A web application for smarter betting strategies.",
@@ -38,7 +45,6 @@ const ProjectDetails = async ({ params }: { params: Promise<ProjectParams> }) =>
             link: "https://chloegoodmanhair.com",
             image: "/placeholder-image.png",
         },
-        // Add more projects here
     };
 
     const project = projectData[projectTitle];

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Resume = () => {
     return (
-        <section className="h-screen flex items-center bg-gradient-to-b from-gray-400 to-gray-300 md:from-gray-500 md:to-gray-400 justify-center bg-gray-100 w-full">
+        <section className="h-screen flex items-center bg-black justify-center w-full">
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">Resume</h2>
                 <p className="text-lg">

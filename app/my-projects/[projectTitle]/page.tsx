@@ -11,9 +11,7 @@ interface Project {
     image: string;
 }
 
-interface PageProps {
-    params: Promise<{ projectTitle: string }> | { projectTitle: string };
-}
+export type paramsType = Promise<{ projectTitle: string }>;
 
 // Define the list of projects and their details
 const projectData: Record<string, Project> = {
@@ -59,8 +57,8 @@ export async function generateStaticParams() {
 }
 
 // Dynamic route component
-export default function ProjectDetails({ params }: { params: PageProps }) {
-    const { projectTitle } = React.use(params);
+export default function ProjectDetails(props: { params : paramsType }) {
+    const { projectTitle } = React.use(props.params);
 
     const project = projectData[projectTitle];
 

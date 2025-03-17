@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-const ProjectDetails = ({ params }: { params: { projectTitle: string } }) => {
+interface ProjectParams {
+    projectTitle: string;
+}
+
+const ProjectDetails = ({ params }: { params: ProjectParams }) => {
     const { projectTitle } = params;
 
     // Example data for demonstration purposes
@@ -13,7 +17,7 @@ const ProjectDetails = ({ params }: { params: { projectTitle: string } }) => {
             link: "https://betsmarter.com",
             image: "/placeholder-image.png",
         },
-        "Game%20Library": {
+        "Game Library": {
             date: "2025",
             description: "A library of mobile games for iOS and Android, built with React Native.",
             longDescription: "Game Library is a collection of fun and engaging mobile games designed for players of all ages.",
@@ -27,7 +31,7 @@ const ProjectDetails = ({ params }: { params: { projectTitle: string } }) => {
             link: "https://budjournal.com",
             image: "/placeholder-image.png",
         },
-        "Chloe%20Goodman%20Hair": {
+        "Chloe Goodman Hair": {
             date: "2025",
             description: "A personal website for a hair stylist, showcasing her portfolio and services.",
             longDescription: "Chloe Goodman Hair is a beautifully designed website that highlights the stylist's work and offers easy booking options.",

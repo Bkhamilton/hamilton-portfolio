@@ -130,3 +130,9 @@ a:hover {
   height: 4px;
   animation: twinkle 2s infinite ease-in-out, drift 5s infinite ease-in-out;
 }
+
+.star.large {
+  width: 6px;
+  height: 6px;
+  animation: twinkle 3s infinite ease-in-out, drift 7s infinite ease-in-out;
+}

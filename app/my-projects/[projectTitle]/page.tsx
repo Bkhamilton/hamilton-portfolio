@@ -11,10 +11,6 @@ interface Project {
     image: string;
 }
 
-interface ProjectParams {
-    projectTitle: Promise<string>;
-}
-
 interface PageProps {
     params: Promise<{ projectTitle: string }> | { projectTitle: string };
 }

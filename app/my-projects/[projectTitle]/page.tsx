@@ -15,6 +15,10 @@ interface ProjectParams {
     projectTitle: Promise<string>;
 }
 
+interface PageProps {
+    params: Promise<{ projectTitle: string }> | { projectTitle: string };
+}
+
 // Define the list of projects and their details
 const projectData: Record<string, Project> = {
     "BetSmarter": {
@@ -59,7 +63,7 @@ export async function generateStaticParams() {
 }
 
 // Dynamic route component
-export default function ProjectDetails({ params }: { params: ProjectParams }) {
+export default function ProjectDetails({ params }: { params: PageProps }) {
     const { projectTitle } = React.use(params);
 
     const project = projectData[projectTitle];

@@ -28,10 +28,12 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <div className="relative bg-black">
+                    {/* Planets and Shooting Stars */}
+                    <div className="hidden md:block">
+                        <ParallaxEffects />
+                    </div>
                     {/* Stars Layer */}
                     <StarsBackground />
-                    {/* Planets and Shooting Stars */}
-                    <ParallaxEffects />
 
                     {/* Main Content */}
                     <div className="relative z-10 flex">

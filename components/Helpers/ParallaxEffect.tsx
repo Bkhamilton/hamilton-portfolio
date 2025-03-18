@@ -1,6 +1,7 @@
 "use client"; // Mark this as a Client Component
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type Planet = {
     name: string;
@@ -17,7 +18,7 @@ const planets = [
         top: 2,
         left: 10,
         opacity: 0.4,
-        size: "60px",
+        size: "50px",
         animation: "movePlanets 40s linear infinite",
     },
     {
@@ -25,7 +26,7 @@ const planets = [
         top: 190,
         left: 30,
         opacity: 0.5,
-        size: "60px",
+        size: "50px",
         animation: "movePlanets 32s linear infinite",
     },
     {
@@ -33,7 +34,7 @@ const planets = [
         top: 52,
         left: 40,
         opacity: 0.8,
-        size: "75px",
+        size: "65px",
         animation: "",
     },
     {
@@ -41,7 +42,7 @@ const planets = [
         top: 30,
         left: 96,
         opacity: 0.7,
-        size: "40px",
+        size: "35px",
         animation: "movePlanets 50s linear infinite",
     },
     {
@@ -49,7 +50,7 @@ const planets = [
         top: 100,
         left: 70,
         opacity: 0.9,
-        size: "80px",
+        size: "75px",
         animation: "movePlanets 70s linear infinite",
     },
     {
@@ -86,7 +87,7 @@ export default function ParallaxEffects() {
             case "uranus":
                 return `${currentPlanet.top - scrollY * 0.06}%`
             case "neptune":
-                return `${currentPlanet.top - scrollY * 0.003}%`
+                return `${currentPlanet.top - scrollY * 0.001}%`
             case "pluto":
                 return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
             case "moon":

@@ -2,61 +2,98 @@
 
 import { useEffect, useState } from "react";
 
+type Planet = {
+    name: string;
+    top: number;
+    left: number;
+    opacity: number;
+    size: string;
+    animation: string;
+}
+
 const planets = [
-    "mars",
-    "jupiter",
-    "uranus",
-    "neptune",
-    "moon",
-    "pluto",
-    "astronaut"
+    {
+        name: "mars",
+        top: 2,
+        left: 10,
+        opacity: 0.4,
+        size: "60px",
+        animation: "movePlanets 40s linear infinite",
+    },
+    {
+        name: "uranus",
+        top: 190,
+        left: 30,
+        opacity: 0.5,
+        size: "60px",
+        animation: "movePlanets 32s linear infinite",
+    },
+    {
+        name: "neptune",
+        top: 52,
+        left: 40,
+        opacity: 0.8,
+        size: "75px",
+        animation: "",
+    },
+    {
+        name: "pluto",
+        top: 30,
+        left: 96,
+        opacity: 0.7,
+        size: "40px",
+        animation: "movePlanets 50s linear infinite",
+    },
+    {
+        name: "astronaut",
+        top: 100,
+        left: 70,
+        opacity: 0.9,
+        size: "80px",
+        animation: "movePlanets 70s linear infinite",
+    },
+    {
+        name: "moon",
+        top: 240,
+        left: 10,
+        opacity: 0.4,
+        size: "65px",
+        animation: "",
+    }
 ];
 
 export default function ParallaxEffects() {
-    const [selectedPlanets, setSelectedPlanets] = useState<string[]>([]);
+    const [selectedPlanets, setSelectedPlanets] = useState<Planet[]>(planets);
+    const [scrollY, setScrollY] = useState<number>(0);
 
     useEffect(() => {
-        // Randomly select planets without repetition
-        const shuffledPlanets = [...planets].sort(() => Math.random() - 0.5);
-        setSelectedPlanets(shuffledPlanets.slice(0, 3)); // Display 3 planets at a time
-
         const handleScroll = () => {
-            const shootingStars = document.querySelector(".shooting-stars");
-
-            if (shootingStars) {
-                // Add shooting stars randomly
-                if (Math.random() > 0.98) {
-                    const star = document.createElement("div");
-                    star.classList.add("shooting-star");
-                    star.style.top = `${Math.random() * 100}%`;
-                    star.style.left = `${Math.random() * 100}%`;
-                    shootingStars.appendChild(star);
-
-                    // Remove shooting star after animation ends
-                    setTimeout(() => {
-                        star.remove();
-                    }, 5000);
-                }
-            }
+            setScrollY(window.scrollY);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    function getRandomNumber() {
-        const random = Math.random();
-        if (random < 0.1) return 0.3; // 10% chance for 0.3
-        if (random > 0.9) return 0.9; // 10% chance for 0.9
-
-        // Normal distribution for numbers between 0.3 and 0.9
-        const mean = 0.6;
-        const stdDev = 0.1;
-        let num;
-        do {
-            num = mean + stdDev * (Math.random() * 2 - 1); // Generate a number within the range
-        } while (num < 0.3 || num > 0.9); // Ensure it's within bounds
-        return num;
+    function getTopValue(planet: string) {
+        const currentPlanet = planets.find(p => p.name === planet);
+        if (!currentPlanet) return "0%"; // Fallback if planet not found
+        switch (planet) {
+            case "astronaut":
+                return `${currentPlanet.top - scrollY * 0.0027}%`; // Moves up instead of down
+            case "mars":
+                return `${currentPlanet.top - scrollY * 0.04}%`
+            case "uranus":
+                return `${currentPlanet.top - scrollY * 0.06}%`
+            case "neptune":
+                return `${currentPlanet.top - scrollY * 0.003}%`
+            case "pluto":
+                return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
+            case "moon":
+                return `${currentPlanet.top - scrollY * 0.04}%`; // Parallax effect for jupiter
+            default:
+                return `${currentPlanet.top}%`; // Default case (no parallax effect)
+        }
     }
 
     return (
@@ -65,18 +102,19 @@ export default function ParallaxEffects() {
             <div className="parallax-layer planets">
                 {selectedPlanets.map((planet, index) => (
                     <img
-                        key={planet}
-                        src={`/${planet}.jpg`}
-                        alt={planet}
+                        key={index}
+                        src={`/${planet.name}.jpg`}
+                        alt={planet.name}
                         className="planet"
                         style={{
                             position: "absolute",
-                            top: `${20 + index * 20}%`, // Adjust positioning as needed
-                            left: `${Math.random() * 80}%`, // Random horizontal position
-                            width: "100px", // Adjust size as needed
+                            top: getTopValue(planet.name), // Parallax effect
+                            left: `${planet.left}%`,
+                            width: planet.size, // Adjust size as needed
                             height: "auto",
-                            opacity: getRandomNumber(), // Random value between 0.4 and 0.8
-                            animation: `movePlanets ${30 + index * 10}s linear infinite`,
+                            opacity: planet.opacity, // Random value between 0.4 and 0.8
+                            animation: planet.animation, // Animation for planets
+                            willChange: "transform, opacity", // Optimize for performance
                         }}
                     />
                 ))}

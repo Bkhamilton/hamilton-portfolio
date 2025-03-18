@@ -10,10 +10,6 @@ import ParallaxEffects from '@/components/Helpers/ParallaxEffect';
 export default function Home() {
     return (
         <div className="overflow-y-scroll">
-            {/* Background Effects */}
-            <div className="fixed top-0 left-0 w-full h-full z-0">
-                <ParallaxEffects />
-            </div>
 
             {/* Main Content */}
             <section id="intro" className="h-screen w-full">

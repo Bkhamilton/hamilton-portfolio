@@ -5,7 +5,6 @@ import MyStack from '@/components/MyStack/MyStack';
 import Resume from '@/components/Resume/Resume';
 import Experience from '@/components/MyWork/Experience/Experience';
 import Projects from '@/components/MyWork/Projects/Projects';
-import ParallaxEffects from '@/components/Helpers/ParallaxEffect';
 
 export default function Home() {
     return (

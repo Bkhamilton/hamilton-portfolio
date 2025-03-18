@@ -5,10 +5,17 @@ import MyStack from '@/components/MyStack/MyStack';
 import Resume from '@/components/Resume/Resume';
 import Experience from '@/components/MyWork/Experience/Experience';
 import Projects from '@/components/MyWork/Projects/Projects';
+import ParallaxEffects from '@/components/Helpers/ParallaxEffect';
 
 export default function Home() {
     return (
         <div className="overflow-y-scroll">
+            {/* Background Effects */}
+            <div className="fixed top-0 left-0 w-full h-full z-0">
+                <ParallaxEffects />
+            </div>
+
+            {/* Main Content */}
             <section id="intro" className="h-screen w-full">
                 <Intro />
             </section>

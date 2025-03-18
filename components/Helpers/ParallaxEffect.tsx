@@ -63,7 +63,7 @@ const planets = [
 ];
 
 export default function ParallaxEffects() {
-    const [selectedPlanets, setSelectedPlanets] = useState<Planet[]>(planets);
+    const [selectedPlanets,] = useState<Planet[]>(planets);
     const [scrollY, setScrollY] = useState<number>(0);
 
     useEffect(() => {

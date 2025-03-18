@@ -14,7 +14,7 @@ interface TechStackBoxProps {
     technologies: string[];
 }
 
-const logoMapping: { [key: string]: JSX.Element } = {
+const logoMapping: { [key: string]: any } = {
     "JavaScript": <SiJavascript className="text-yellow-500" />,
     "TypeScript": <SiTypescript className="text-blue-500" />,
     "React": <SiReact className="text-blue-600" />,

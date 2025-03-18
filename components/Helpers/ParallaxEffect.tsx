@@ -102,11 +102,9 @@ export default function ParallaxEffects() {
             {/* Planets Layer */}
             <div className="parallax-layer planets">
                 {selectedPlanets.map((planet, index) => (
-                    <img
+                    <div
                         key={index}
-                        src={`/${planet.name}.jpg`}
-                        alt={planet.name}
-                        className="planet"
+                        className="planet-wrapper"
                         style={{
                             position: "absolute",
                             top: getTopValue(planet.name), // Parallax effect
@@ -114,10 +112,21 @@ export default function ParallaxEffects() {
                             width: planet.size, // Adjust size as needed
                             height: "auto",
                             opacity: planet.opacity, // Random value between 0.4 and 0.8
-                            animation: planet.animation, // Animation for planets
                             willChange: "transform, opacity", // Optimize for performance
                         }}
-                    />
+                    >
+                        <Image
+                            src={`/${planet.name}.jpg`}
+                            alt={planet.name}
+                            width={parseInt(planet.size)} // Convert size to number for width
+                            height={parseInt(planet.size)} // Convert size to number for height
+                            className="planet"
+                            style={{
+                                objectFit: "contain", // Ensure the image fits properly
+                                animation: planet.animation, // Animation for planets
+                            }}
+                        />
+                    </div>
                 ))}
             </div>
 

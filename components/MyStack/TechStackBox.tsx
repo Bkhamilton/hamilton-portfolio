@@ -47,14 +47,14 @@ const TechStackBox: React.FC<TechStackBoxProps> = ({ type, technologies }) => {
         return chunks;
     };
 
-    const technologyChunks = chunkArray(technologies, 6);
+    const technologyChunks = chunkArray(technologies, 5);
 
     return (
         <div className="flex mb-8">
             <div className="w-1/3 text-left">
                 <h3 className="text-2xl font-semibold mb-2">{type}</h3>
             </div>
-            <div className="w-2/3 text-left flex">
+            <div className="w-2/3 text-left flex bg-white/20 backdrop-blur-lg rounded-lg border border-white/10 shadow-lg p-4">
                 {technologyChunks.map((chunk, columnIndex) => (
                     <ul key={columnIndex} className="space-y-2 w-1/2">
                         {chunk.map((tech, index) => (

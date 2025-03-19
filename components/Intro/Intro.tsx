@@ -23,13 +23,13 @@ const Intro = () => {
                     </p>
                     <div className="flex justify-center md:justify-start mt-6 space-x-4">
                         {/* Icons */}
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400">
+                        <a href="https://www.linkedin.com/in/benkhamilton/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-blue-400">
                             <AiFillLinkedin /> {/* LinkedIn icon from react-icons */}
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400">
+                        <a href="https://github.com/Bkhamilton" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-gray-400">
                             <AiFillGithub /> {/* GitHub icon from react-icons */}
                         </a>
-                        <a href="mailto:bkhamilton310@gmail.com" className="text-2xl hover:text-red-400">
+                        <a href="mailto:bkhamilton310@gmail.com" className="text-3xl hover:text-red-400">
                             <AiFillMail /> {/* Mail icon from react-icons */}
                         </a>
                     </div>

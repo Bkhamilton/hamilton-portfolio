@@ -147,6 +147,13 @@ a:hover {
   animation: twinkle 3s infinite ease-in-out, drift 7s infinite ease-in-out;
 }
 
+.star.xlarge {
+  width: 12px;
+  height: 12px;
+  animation: twinkle 4s infinite ease-in-out, drift 9s infinite ease-in-out;
+  margin: 6px;
+}
+
 .planets {
   position: fixed;
   top: 0;

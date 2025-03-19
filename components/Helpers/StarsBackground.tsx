@@ -12,7 +12,7 @@ export default function StarsBackground() {
             starsContainer.innerHTML = "";
 
             // Number of stars to create (reduce this number for fewer stars)
-            const starCount = 90; // Adjust this number to control star density
+            const starCount = 300; // Adjust this number to control star density
 
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement("div");
@@ -24,6 +24,8 @@ export default function StarsBackground() {
                     star.classList.add("small");
                 } else if (randomSize < 0.7) {
                     star.classList.add("medium");
+                } else if (randomSize > 0.98) {
+                    star.classList.add('xlarge');
                 } else {
                     star.classList.add("large");
                 }

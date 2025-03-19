@@ -26,7 +26,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
             {isHovered && (
                 <div className="absolute left-0 mt-2 p-4 bg-white border border-gray-300 shadow-lg z-10 w-64">
                     <Image
-                        src="/placeholder-image.png"
+                        src="/placeholder-image.jpg"
                         alt="Project"
                         width={256}
                         height={128}

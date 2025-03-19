@@ -40,7 +40,7 @@ const Intro = () => {
                             height="150"
                             title="GitHub Contribution Chart"
                             loading="lazy"
-                            className='bg-white/10 backdrop-blur-lg rounded-lg border border-white/10 shadow-lg p-4'
+                            className='bg-gray/10 backdrop-blur-lg rounded-lg border border-white/10 shadow-lg p-4'
                             style={{
                                 borderRadius: "10px",
                                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",

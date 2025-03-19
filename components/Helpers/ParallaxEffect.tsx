@@ -10,6 +10,7 @@ type Planet = {
     opacity: number;
     size: string;
     animation: string;
+    fileName: string;
 }
 
 const planets = [
@@ -20,14 +21,25 @@ const planets = [
         opacity: 0.4,
         size: "50px",
         animation: "movePlanets 40s linear infinite",
+        fileName: "/mars.jpg",
     },
     {
         name: "uranus",
+        top: 66,
+        left: 10,
+        opacity: 0.5,
+        size: "35px",
+        animation: "movePlanets 32s linear infinite",
+        fileName: "/uranus.jpg",
+    },
+    {
+        name: 'asteroid',
         top: 190,
         left: 30,
-        opacity: 0.5,
+        opacity: 0.8,
         size: "50px",
         animation: "movePlanets 32s linear infinite",
+        fileName: "/asteroid.png",
     },
     {
         name: "neptune",
@@ -36,6 +48,7 @@ const planets = [
         opacity: 0.8,
         size: "65px",
         animation: "",
+        fileName: "/neptune.jpg",
     },
     {
         name: "pluto",
@@ -44,6 +57,7 @@ const planets = [
         opacity: 0.7,
         size: "35px",
         animation: "movePlanets 50s linear infinite",
+        fileName: "/pluto.jpg",
     },
     {
         name: "astronaut",
@@ -52,14 +66,25 @@ const planets = [
         opacity: 0.9,
         size: "75px",
         animation: "movePlanets 70s linear infinite",
+        fileName: "/astronaut.jpg",
     },
     {
         name: "moon",
-        top: 240,
+        top: 310,
         left: 10,
         opacity: 0.4,
         size: "65px",
         animation: "",
+        fileName: "/moon.jpg",
+    },
+    {
+        name: 'space_station',
+        top: 150,
+        left: -50,
+        opacity: 0.8,
+        size: '55px',
+        animation: '',
+        fileName: '/space_station.png',
     }
 ];
 
@@ -85,15 +110,27 @@ export default function ParallaxEffects() {
             case "mars":
                 return `${currentPlanet.top - scrollY * 0.04}%`
             case "uranus":
-                return `${currentPlanet.top - scrollY * 0.06}%`
+                return `${currentPlanet.top - scrollY * 0.006}%`
             case "neptune":
-                return `${currentPlanet.top - scrollY * 0.001}%`
+                return `${currentPlanet.top - scrollY * 0.0014}%`
             case "pluto":
                 return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
             case "moon":
-                return `${currentPlanet.top - scrollY * 0.04}%`; // Parallax effect for jupiter
+                return `${currentPlanet.top - scrollY * 0.06}%`; // Parallax effect for jupiter
+            case "asteroid":
+                return `${currentPlanet.top - scrollY * 0.06}%`;
+            case "space_station":
+                return `${currentPlanet.top - scrollY * 0.03}%`; // Parallax effect for space station
             default:
                 return `${currentPlanet.top}%`; // Default case (no parallax effect)
+        }
+    }
+
+    function getLeftValue(planet: Planet) {
+        if (planet.name === 'space_station') {
+            return planet.left + (scrollY * 0.04) + "%"; // Moves right instead of left
+        } else {
+            return planet.left + '%';
         }
     }
 
@@ -108,7 +145,7 @@ export default function ParallaxEffects() {
                         style={{
                             position: "absolute",
                             top: getTopValue(planet.name), // Parallax effect
-                            left: `${planet.left}%`,
+                            left: getLeftValue(planet), // Fixed position for left
                             width: planet.size, // Adjust size as needed
                             height: "auto",
                             opacity: planet.opacity, // Random value between 0.4 and 0.8
@@ -116,7 +153,7 @@ export default function ParallaxEffects() {
                         }}
                     >
                         <Image
-                            src={`/${planet.name}.jpg`}
+                            src={planet.fileName}
                             alt={planet.name}
                             width={parseInt(planet.size)} // Convert size to number for width
                             height={parseInt(planet.size)} // Convert size to number for height

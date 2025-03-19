@@ -11,11 +11,11 @@ const Intro = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-between h-screen text-white w-full">
+        <section className="flex flex-col items-center justify-between h-screen text-white w-full bg-space-background bg-cover bg-center">
             {/* Main Content */}
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full px-8">
-                {/* Section A */}
-                <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                {/* Section A with Glassmorphism Effect */}
+                <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 p-8 bg-white/10 backdrop-blur-sm rounded-lg border border-white/10 shadow-lg">
                     <h1 className="text-5xl font-bold">Ben Hamilton</h1>
                     <h2 className="text-3xl font-semibold mt-2">Software Developer</h2>
                     <p className="mt-4 text-lg">
@@ -32,6 +32,14 @@ const Intro = () => {
                         <a href="mailto:bkhamilton310@gmail.com" className="text-2xl hover:text-red-400">
                             <AiFillMail /> {/* Mail icon from react-icons */}
                         </a>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-md rounded-lg border border-white/10 shadow-lg p-4">
+                        <iframe
+                            src="https://ghchart.rshah.org/Bkhamilton" // Replace with your GitHub username
+                            width="100%"
+                            height="150"
+                            title="GitHub Contribution Chart"
+                        ></iframe>
                     </div>
                 </div>
 

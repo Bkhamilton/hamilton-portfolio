@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 const Intro = () => {
@@ -69,7 +70,13 @@ const Intro = () => {
                         }}
                     >
                         {/* Placeholder for image */}
-                        <span>Image</span>
+                        <Image
+                            src="/logo.png" // Replace with your profile image path
+                            alt="Profile"
+                            width={192} // Adjust width as needed
+                            height={192} // Adjust height as needed
+                            className="rounded-full object-cover w-full h-full"
+                        />
                     </div>
                 </div>
             </div>

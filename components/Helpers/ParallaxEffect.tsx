@@ -44,7 +44,7 @@ const planets = [
     {
         name: "neptune",
         top: 52,
-        left: 40,
+        left: 37,
         opacity: 0.8,
         size: "65px",
         animation: "",

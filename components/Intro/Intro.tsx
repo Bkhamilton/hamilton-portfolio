@@ -33,12 +33,19 @@ const Intro = () => {
                             <AiFillMail /> {/* Mail icon from react-icons */}
                         </a>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-md rounded-lg border border-white/10 shadow-lg p-4">
+                    <div className="mt-6">
                         <iframe
-                            src="https://ghchart.rshah.org/Bkhamilton" // Replace with your GitHub username
+                            src="https://ghchart.rshah.org/1062/Bkhamilton" // Replace with your GitHub username
                             width="100%"
                             height="150"
                             title="GitHub Contribution Chart"
+                            loading="lazy"
+                            className='bg-white/10 backdrop-blur-lg rounded-lg border border-white/10 shadow-lg p-4'
+                            style={{
+                                borderRadius: "10px",
+                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                                overflow: "hidden",
+                            }}
                         ></iframe>
                     </div>
                 </div>

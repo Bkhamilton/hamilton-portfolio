@@ -28,11 +28,17 @@ html, body {
 }
 
 section {
-  height: 100vh; /* Each section takes the full viewport height */
+  height: auto; /* Default height for smaller screens */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  section {
+    height: 100vh; /* Apply 100vh for medium screens and wider */
+  }
 }
 
 .bg-gray-100 {

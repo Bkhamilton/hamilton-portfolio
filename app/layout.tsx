@@ -51,7 +51,7 @@ export default function RootLayout({
                             </div>
                         </div>
                         <div className="ml-1/4 w-full">
-                        {children}
+                            {children}
                         </div>
                     </div>
                 </div>

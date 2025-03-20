@@ -12,7 +12,7 @@ const Intro = () => {
     };
 
     return (
-        <section className="flex flex-col items-center justify-between h-screen text-white w-full bg-space-background bg-cover bg-center">
+        <section className="flex flex-col items-center justify-between md:h-screen text-white w-full bg-space-background bg-cover bg-center py-10">
             {/* Main Content */}
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full px-8">
                 {/* Section A with Glassmorphism Effect */}

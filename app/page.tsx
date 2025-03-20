@@ -11,13 +11,13 @@ export default function Home() {
         <div className="overflow-y-scroll">
 
             {/* Main Content */}
-            <section id="intro" className="h-screen w-full">
+            <section id="intro" className="md:h-screen w-full">
                 <Intro />
             </section>
-            <section id="about-me" className="h-screen w-full">
+            <section id="about-me" className="md:h-screen w-full">
                 <Services />
             </section>
-            <section id="my-stack" className="h-screen w-full">
+            <section id="my-stack" className="md:h-screen w-full">
                 <MyStack />
             </section>
 
@@ -43,7 +43,7 @@ export default function Home() {
                 </section>
             </div>
 
-            <section id="resume" className="h-screen w-full">
+            <section id="resume" className="md:h-screen w-full">
                 <Resume />
             </section>
         </div>

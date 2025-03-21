@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import './ProjectPage.css'; // Ensure you have the CSS for styles
 import ShootingStars from '../Helpers/ShootingStars';
 
@@ -21,11 +22,21 @@ interface ProjectPageProps {
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
 
     const [isHovered, setIsHovered] = useState(false);
+    const router = useRouter();
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-8 bg-space-background bg-cover bg-center project-page">
+        <div className="flex items-center justify-center px-8 bg-space-background bg-cover bg-center project-page">
+            {/* Back Button */}
+            <button
+                onClick={() => router.push('/')} // Navigate to the home page
+                className="absolute top-8 left-16 text-white text-4xl hover:text-gray-400 transition"
+                aria-label="Go back to home"
+            >
+                &#x276E; {/* Left caret symbol */}
+            </button>
+
             {/* Glassmorphism Container */}
-            <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-lg border border-white/10 shadow-lg p-8 overflow-y-auto z-10">
+            <div className="min-h-screen w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-lg border border-white/10 shadow-lg p-8 overflow-y-auto z-10">
                 <h1 className="text-4xl font-bold mb-4 text-white">{project.title}</h1>
                 <Image
                     src={project.image}

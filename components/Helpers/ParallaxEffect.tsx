@@ -15,15 +15,6 @@ type Planet = {
 
 const planets = [
     {
-        name: "mars",
-        top: 2,
-        left: 10,
-        opacity: 0.4,
-        size: "50px",
-        animation: "movePlanets 40s linear infinite",
-        fileName: "/mars.jpg",
-    },
-    {
         name: "uranus",
         top: 66,
         left: 10,
@@ -51,13 +42,13 @@ const planets = [
         fileName: "/neptune.jpg",
     },
     {
-        name: "pluto",
+        name: "mars",
         top: 30,
         left: 96,
         opacity: 0.7,
         size: "35px",
         animation: "movePlanets 50s linear infinite",
-        fileName: "/pluto.jpg",
+        fileName: "/mars.jpg",
     },
     {
         name: "astronaut",
@@ -107,13 +98,11 @@ export default function ParallaxEffects() {
         switch (planet) {
             case "astronaut":
                 return `${currentPlanet.top - scrollY * 0.0027}%`; // Moves up instead of down
-            case "mars":
-                return `${currentPlanet.top - scrollY * 0.04}%`
             case "uranus":
                 return `${currentPlanet.top - scrollY * 0.006}%`
             case "neptune":
                 return `${currentPlanet.top - scrollY * 0.0014}%`
-            case "pluto":
+            case "mars":
                 return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
             case "moon":
                 return `${currentPlanet.top - scrollY * 0.06}%`; // Parallax effect for jupiter

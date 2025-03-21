@@ -134,6 +134,29 @@ export default function ParallaxEffects() {
         }
     }
 
+    function getSize(planet: Planet): string {
+        if (planet.name === "space_station") {
+            // Define the size range
+            const maxSize = 55; // Maximum size in pixels
+            const minSize = 35; // Minimum size in pixels
+            const shrinkStartScroll = 2700; // Threshold: Start shrinking after 200px of scroll
+    
+            // If scrollY is less than the threshold, return the max size
+            if (scrollY < shrinkStartScroll) {
+                return `${maxSize}px`;
+            }
+    
+            // Calculate the size based on scrollY, subtracting the threshold
+            const size = maxSize - ((scrollY - shrinkStartScroll) * 0.03); // Adjust the shrinking rate (0.03 is the rate of shrinkage)
+    
+            // Clamp the size between minSize and maxSize
+            return `${Math.max(minSize, Math.min(size, maxSize))}px`;
+        }
+    
+        // Default size for other planets
+        return planet.size;
+    }
+
     return (
         <>
             {/* Planets Layer */}
@@ -146,7 +169,7 @@ export default function ParallaxEffects() {
                             position: "absolute",
                             top: getTopValue(planet.name), // Parallax effect
                             left: getLeftValue(planet), // Fixed position for left
-                            width: planet.size, // Adjust size as needed
+                            width: getSize(planet), // Adjust size as needed
                             height: "auto",
                             opacity: planet.opacity, // Random value between 0.4 and 0.8
                             willChange: "transform, opacity", // Optimize for performance

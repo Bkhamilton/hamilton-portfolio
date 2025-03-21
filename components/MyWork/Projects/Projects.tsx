@@ -3,7 +3,7 @@ import ProjectBox from './ProjectBox';
 
 const Projects = () => {
     return (
-        <section className="h-screen flex items-center justify-center w-full text-white">
+        <section className="md:h-screen flex items-center justify-center w-full text-white">
             <div className="text-center">
                 <h2 className="text-4xl font-bold mb-4">My Projects</h2>
                 <p className="text-lg">

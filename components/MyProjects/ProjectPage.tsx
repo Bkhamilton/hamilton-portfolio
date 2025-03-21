@@ -20,7 +20,6 @@ interface ProjectPageProps {
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
-
     const [isHovered, setIsHovered] = useState(false);
     const router = useRouter();
 
@@ -37,28 +36,45 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
 
             {/* Glassmorphism Container */}
             <div className="min-h-screen w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-lg border border-white/10 shadow-lg p-8 overflow-y-auto z-10">
-                <h1 className="text-4xl font-bold mb-4 text-white">{project.title}</h1>
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={600}
-                    height={300}
-                    className="w-full h-auto object-cover mb-4 rounded-lg"
-                />
-                <p className="text-lg text-green-300 mb-2">{project.description}</p>
-                <p className="text-sm text-blue-300 mb-4">{project.date}</p>
-                <p className="text-base text-white mb-6">{project.longDescription}</p>
-                <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="holographic-button inline-block px-6 py-2 text-lg font-semibold text-center"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    Visit Project
-                </a>
+                {/* Top Section: Title and Logo */}
+                <div className="flex items-center justify-between mb-6">
+                    <h1 className="text-4xl font-bold text-white">{project.title}</h1>
+                    <Image
+                        src={project.image} // Placeholder for the logo
+                        alt={`${project.title} logo`}
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 object-cover rounded-lg"
+                    />
+                </div>
+
+                {/* Center Section: Description and Date */}
+                <div className="text-center mb-6">
+                    <p className="text-lg text-green-300 mb-2">{project.description}</p>
+                    <p className="text-sm text-blue-300 opacity-70">{project.date}</p>
+                </div>
+
+                {/* Long Description Section */}
+                <div className="text-white text-base mb-6">
+                    <p>{project.longDescription}</p>
+                </div>
+
+                {/* Visit Project Button */}
+                <div className="flex justify-center">
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="holographic-button inline-block px-6 py-2 text-lg font-semibold text-center"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        Visit Project
+                    </a>
+                </div>
             </div>
+
+            {/* Shooting Stars Effect */}
             {isHovered && (
                 <div className="z-0">
                     <ShootingStars count={5} />

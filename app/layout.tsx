@@ -28,15 +28,11 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <div className="relative bg-black">
-                    {/* Planets and Shooting Stars */}
-                    <div className="hidden md:block">
-                        <ParallaxEffects />
-                    </div>
                     {/* Stars Layer */}
                     <StarsBackground />
 
                     {/* Main Content */}
-                    <div className="relative z-10 flex">
+                    <div className="relative z-0 flex">
                         <div className="fixed top-50 left-0 h-full w-25 bg-transparent text-white p-2 flex flex-col justify-between">
                             {/* Your pinned component content here */}
                             <div className="flex flex-col items-center">

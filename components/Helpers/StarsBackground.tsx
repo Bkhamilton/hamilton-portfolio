@@ -12,7 +12,9 @@ export default function StarsBackground() {
             starsContainer.innerHTML = "";
 
             // Number of stars to create (reduce this number for fewer stars)
-            const starCount = 250; // Adjust this number to control star density
+            const pageHeight = document.documentElement.scrollHeight; // Total height of the page
+            const baseStarDensity = 0.1; // Number of stars per 100px of height
+            const starCount = Math.floor(pageHeight * baseStarDensity); // Adjust star count based on page height
 
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement("div");

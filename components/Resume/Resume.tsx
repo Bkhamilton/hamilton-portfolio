@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import ShootingStars from '../Helpers/ShootingStars';
 import './Resume.css'; // Create a CSS file for the styles
 
 const Resume = () => {
@@ -27,13 +28,7 @@ const Resume = () => {
             </div>
 
             {/* Shooting Stars */}
-            {isHovered && (
-                <div className="shooting-stars">
-                    {[...Array(5)].map((_, index) => (
-                        <span key={index} className={`shoot-star star-${index + 1}`}></span>
-                    ))}
-                </div>
-            )}
+            {isHovered && <ShootingStars count={5} />}
         </section>
     );
 };

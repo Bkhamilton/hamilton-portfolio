@@ -1,0 +1,116 @@
+{
+    "projects": [
+        {
+            "id": "betsmarter",
+            "title": "BetSmarter",
+            "date": "2024-Present",
+            "overview": "BetSmarter is a personal analytics companion designed to help sports bettors transform raw betting data into actionable insights. Built with React Native and Expo, the app provides a seamless cross-platform experience, empowering users to make smarter, data-driven decisions in the $140+ billion sports betting market.",
+            "keyFeatures": [
+                {
+                    "title": "Comprehensive Dashboard",
+                    "description": "The app features a centralized dashboard that displays open bets, recent results, and an overview of the user’s betting portfolio. This intuitive interface ensures users have immediate access to critical information at a glance."
+                },
+                {
+                    "title": "Advanced Analytics with Insights Page",
+                    "description": "BetSmarter’s Insights page offers powerful tools to analyze betting patterns, including a Streak Detector, Bankroll Manager, and Bet Analysis System."
+                },
+                {
+                    "title": "Seamless Bet Recording",
+                    "description": "The Bet Placing interface mimics the layout of popular sportsbooks, making it easy for users to input bets from any platform. Once recorded, BetSmarter automatically tracks, analyzes, and provides insights on every wager."
+                },
+                {
+                    "title": "Data-Driven Decision Making",
+                    "description": "The Data page aggregates comprehensive statistics on bookmakers, teams, and players, sourced in real-time through integrated APIs. This feature ensures users can make informed decisions based on data rather than instinct."
+                },
+                {
+                    "title": "Personalized User Experience",
+                    "description": "The Profile Page stores user preferences and settings, allowing the app to adapt to each user’s unique betting style."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Frontend",
+                    "description": "Developed using React Native and Expo for a smooth, cross-platform experience."
+                },
+                {
+                    "title": "Backend",
+                    "description": "Utilized Supabase for efficient storage and management of betting and sports data."
+                },
+                {
+                    "title": "APIs",
+                    "description": "Integrated real-time sports and betting data APIs to provide up-to-date statistics and insights."
+                },
+                {
+                    "title": "Local Storage",
+                    "description": "Implemented local data storage to ensure user privacy and offline functionality."
+                }
+            ],
+            "why": "BetSmarter is more than just an app – it’s a tool designed to give bettors an edge in a competitive market. By combining intuitive design, advanced analytics, and real-time data, BetSmarter helps users understand their betting habits, refine their strategies, and ultimately make smarter decisions.",
+            "link": "https://betsmarter.com",
+            "image": "/placeholder-image.jpg"
+        },
+        {
+            "id": "game-library",
+            "title": "Game Library",
+            "date": "2025",
+            "overview": "Game Library is a collection of fun and engaging mobile games designed for players of all ages. Built with React Native, it provides a seamless gaming experience on both iOS and Android.",
+            "keyFeatures": [
+                {
+                    "title": "Diverse Game Collection",
+                    "description": "Offers a wide variety of games catering to different interests and age groups."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Cross-Platform Development",
+                    "description": "Built using React Native to ensure compatibility with both iOS and Android devices."
+                }
+            ],
+            "why": "Game Library aims to bring joy and entertainment to users by providing a curated selection of high-quality mobile games.",
+            "link": "https://gamelibrary.com",
+            "image": "/placeholder-image.jpg"
+        },
+        {
+            "id": "budjournal",
+            "title": "BudJournal",
+            "date": "2024",
+            "overview": "BudJournal allows users to log their cannabis experiences, helping them find the perfect strain for their needs. Built with React and Firebase, it ensures a smooth and secure journaling experience.",
+            "keyFeatures": [
+                {
+                    "title": "Strain Tracking",
+                    "description": "Enables users to log and analyze their experiences with different cannabis strains."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Secure Data Storage",
+                    "description": "Utilizes Firebase for reliable and secure storage of user data."
+                }
+            ],
+            "why": "BudJournal helps users make informed decisions about cannabis use by providing a personalized and data-driven journaling experience.",
+            "link": "https://budjournal.com",
+            "image": "/placeholder-image.jpg"
+        },
+        {
+            "id": "chloe-goodman-hair",
+            "title": "Chloe Goodman Hair",
+            "date": "2025",
+            "overview": "Chloe Goodman Hair is a beautifully designed website that highlights the stylist's work and offers easy booking options. It serves as a personal portfolio and service platform.",
+            "keyFeatures": [
+                {
+                    "title": "Portfolio Showcase",
+                    "description": "Displays a gallery of the stylist's work to attract potential clients."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Responsive Design",
+                    "description": "Ensures the website looks great and functions well on all devices."
+                }
+            ],
+            "why": "The website provides a professional online presence for Chloe Goodman, helping her connect with clients and grow her business.",
+            "link": "https://chloegoodmanhair.com",
+            "image": "/placeholder-image.jpg"
+        }
+    ]
+}

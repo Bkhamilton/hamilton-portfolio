@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import './ProjectPage.css'; // Ensure you have the CSS for styles
 import ShootingStars from '../Helpers/ShootingStars';
+import ProjectDisplay from './ProjectDisplay';
 
 interface Project {
     title: string;
@@ -54,10 +55,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
                     <p className="text-sm text-blue-300 opacity-70">{project.date}</p>
                 </div>
 
-                {/* Long Description Section */}
-                <div className="text-white text-base mb-6">
-                    <p>{project.longDescription}</p>
-                </div>
+                <ProjectDisplay projectName={project.title}/>
 
                 {/* Visit Project Button */}
                 <div className="flex justify-center">

@@ -3,15 +3,6 @@ import { notFound } from 'next/navigation';
 import ProjectPage from '@/components/MyProjects/ProjectPage';
 import projects from '@/data/projects.json';
 
-interface Project {
-    title: string;
-    date: string;
-    description: string;
-    longDescription: string;
-    link: string;
-    image: string;
-}
-
 export type paramsType = Promise<{ projectTitle: string }>;
 
 // Generate static paths for all projects

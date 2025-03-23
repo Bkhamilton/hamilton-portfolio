@@ -46,7 +46,7 @@
                 }
             ],
             "why": "BetSmarter is more than just an app – it’s a tool designed to give bettors an edge in a competitive market. By combining intuitive design, advanced analytics, and real-time data, BetSmarter helps users understand their betting habits, refine their strategies, and ultimately make smarter decisions.",
-            "link": "https://betsmarter.com",
+            "link": "https://github.com/Bkhamilton/BetSmart",
             "image": "/placeholder-image.jpg"
         },
         {
@@ -67,7 +67,7 @@
                 }
             ],
             "why": "Game Library aims to bring joy and entertainment to users by providing a curated selection of high-quality mobile games.",
-            "link": "https://gamelibrary.com",
+            "link": "https://github.com/Bkhamilton/game-library",
             "image": "/placeholder-image.jpg"
         },
         {
@@ -88,7 +88,7 @@
                 }
             ],
             "why": "BudJournal helps users make informed decisions about cannabis use by providing a personalized and data-driven journaling experience.",
-            "link": "https://budjournal.com",
+            "link": "https://github.com/Bkhamilton/BudJournal",
             "image": "/placeholder-image.jpg"
         },
         {
@@ -109,7 +109,7 @@
                 }
             ],
             "why": "The website provides a professional online presence for Chloe Goodman, helping her connect with clients and grow her business.",
-            "link": "https://chloegoodmanhair.com",
+            "link": "https://chloe-goodman-hair.vercel.app/",
             "image": "/placeholder-image.jpg"
         }
     ]

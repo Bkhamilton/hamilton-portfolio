@@ -5,7 +5,7 @@ import { BsDatabase, BsDatabaseFill } from "react-icons/bs";
 
 const Services = () => {
     return (
-        <section className="md:h-screen flex flex-col items-center justify-center w-full px-8 py-10 text-white">
+        <section className="md:h-screen flex flex-col items-center justify-center w-full px-8 py-10 text-white z-10">
             <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4">My Services</h2>
                 <p className="text-lg text-gray-200">

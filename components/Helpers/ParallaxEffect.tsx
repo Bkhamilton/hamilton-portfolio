@@ -161,7 +161,7 @@ export default function ParallaxEffects() {
                             width: getSize(planet), // Adjust size as needed
                             height: "auto",
                             opacity: planet.opacity, // Random value between 0.4 and 0.8
-                            willChange: "transform, opacity", // Optimize for performance
+                            willChange: planet.animation ? "transform, opacity" : undefined, // Optimize for performance
                         }}
                     >
                         <Image
@@ -174,6 +174,7 @@ export default function ParallaxEffects() {
                                 objectFit: "contain", // Ensure the image fits properly
                                 animation: planet.animation, // Animation for planets
                             }}
+                            loading="lazy"
                         />
                     </div>
                 ))}

@@ -1,21 +1,20 @@
-"use client"; // Mark this as a Client Component
+"use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function StarsBackground() {
+    const starsContainerRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
         const createStars = () => {
-            const starsContainer = document.querySelector(".stars");
-            if (!starsContainer) return;
+            if (!starsContainerRef.current) return;
 
-            // Clear existing stars
-            starsContainer.innerHTML = "";
+            // Number of stars to create
+            const pageHeight = document.documentElement.scrollHeight;
+            const baseStarDensity = 0.1;
+            const starCount = Math.floor(pageHeight * baseStarDensity);
 
-            // Number of stars to create (reduce this number for fewer stars)
-            const pageHeight = document.documentElement.scrollHeight; // Total height of the page
-            const baseStarDensity = 0.1; // Number of stars per 100px of height
-            const starCount = Math.floor(pageHeight * baseStarDensity); // Adjust star count based on page height
-
+            // Create stars only once
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement("div");
                 star.classList.add("star");
@@ -27,31 +26,20 @@ export default function StarsBackground() {
                 } else if (randomSize < 0.7) {
                     star.classList.add("medium");
                 } else if (randomSize > 0.98) {
-                    star.classList.add('xlarge');
+                    star.classList.add("xlarge");
                 } else {
                     star.classList.add("large");
                 }
 
                 // Randomly position stars
-                const randomTop = Math.random() * 100;
-                const randomLeft = Math.random() * 100;
-                star.style.top = `${randomTop}%`;
-                star.style.left = `${randomLeft}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
 
                 // Randomize animation delay and duration
-                const randomDelay = Math.random() * 5; // Delay between 0 and 5 seconds
-                const randomDuration = 2 + Math.random() * 3; // Duration between 2 and 5 seconds
-                star.style.animationDelay = `${randomDelay}s`;
-                star.style.animationDuration = `${randomDuration}s`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                star.style.animationDuration = `${2 + Math.random() * 3}s`;
 
-                // Add a unique movement pattern for medium stars
-                if (star.classList.contains("medium")) {
-                    const randomX = (Math.random() - 0.5) * 20; // Random X movement (-10px to 10px)
-                    const randomY = (Math.random() - 0.5) * 20; // Random Y movement (-10px to 10px)
-                    star.style.transform = `translate(${randomX}px, ${randomY}px)`;
-                }
-
-                starsContainer.appendChild(star);
+                starsContainerRef.current.appendChild(star);
             }
         };
 
@@ -60,7 +48,7 @@ export default function StarsBackground() {
 
     return (
         <div className="absolute inset-0 z-0">
-            <div className="stars"></div>
+            <div className="stars" ref={starsContainerRef}></div>
         </div>
     );
 }

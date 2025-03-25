@@ -35,6 +35,18 @@ section {
   text-align: center;
 }
 
+h1 {
+  font-family: var(--font-rajdhani), sans-serif; /* Use Rajdhani font */
+}
+
+h2 {
+  font-family: var(--font-orbitron), sans-serif; /* Use Roboto font */
+}
+
+h3, p {
+  font-family: var(--font-rajdhani), sans-serif; /* Use Roboto font */
+}
+
 @media (min-width: 768px) {
   section {
     height: 100vh; /* Apply 100vh for medium screens and wider */

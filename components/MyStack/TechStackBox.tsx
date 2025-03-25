@@ -68,7 +68,7 @@ const TechStackBox: React.FC<TechStackBoxProps> = ({ type, technologies }) => {
                                         {logoMapping[tech] as React.ReactNode}
                                     </span>
                                 )}
-                                <span>{tech}</span>
+                                <p className='text-2xl'>{tech}</p>
                             </li>
                         ))}
                     </ul>

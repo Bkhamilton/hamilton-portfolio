@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Orbitron, Rajdhani } from "next/font/google";
 import "./globals.css";
 import StarsBackground from '@/components/Helpers/StarsBackground'
 
@@ -10,6 +10,24 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+
+const roboto = Roboto({
+    weight: "500",
+    variable: "--font-roboto",
+    subsets: ["latin"],
+});
+
+const orbitron = Orbitron({
+    weight: "500",
+    variable: "--font-orbitron",
+    subsets: ["latin"],
+});
+
+const rajdhani = Rajdhani({
+    weight: "500",
+    variable: "--font-rajdhani",
     subsets: ["latin"],
 });
 
@@ -25,7 +43,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${orbitron.variable} ${rajdhani.variable} antialiased`}>
                 <div className="relative bg-black">
                     {/* Stars Layer */}
                     <StarsBackground />

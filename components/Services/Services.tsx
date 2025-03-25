@@ -2,6 +2,7 @@ import React from 'react';
 import Service from './Service';
 import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa'; // Example icons from React Icons
 import { BsDatabase, BsDatabaseFill } from "react-icons/bs";
+import { MdMonitor } from "react-icons/md";
 
 const Services = () => {
     return (
@@ -27,7 +28,7 @@ const Services = () => {
                 <Service
                     title="Web Development"
                     description="Building responsive and dynamic websites."
-                    icon={<FaCode />}
+                    icon={<MdMonitor />}
                 />
                 <Service
                     title="Mobile Development"

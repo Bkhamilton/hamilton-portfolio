@@ -67,7 +67,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        Visit Project
+                        <h2>Visit Project</h2>
                     </a>
                 </div>
             </div>

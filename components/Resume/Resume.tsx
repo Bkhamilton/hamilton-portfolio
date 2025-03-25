@@ -23,7 +23,7 @@ const Resume = () => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    Download Resume
+                    <h2>Download Resume</h2>
                 </a>
             </div>
 

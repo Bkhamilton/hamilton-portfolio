@@ -25,7 +25,7 @@ const logoMapping: { [key: string]: React.ReactNode } = {
     "CSS": <SiCss3 className="text-blue-500" />,
     "HTML": <TiHtml5 className="text-orange-500" />,
     "Node.js": <FaNode className="text-green-500" />,
-    "Express": <SiExpress className="text-gray-800" />,
+    "Express": <SiExpress className="text-white" />,
     "GraphQL": <SiGraphql className="text-purple-600" />,
     "MongoDB": <DiMongodb className="text-green-600" />,
     "PostgreSQL": <SiPostgresql className="text-blue-700" />,
@@ -52,7 +52,7 @@ const TechStackBox: React.FC<TechStackBoxProps> = ({ type, technologies }) => {
     return (
         <div className="flex flex-col md:flex-row mb-8">
             <div className="text-left md:w-1/5">
-                <h3 className="text-2xl font-semibold mb-2">{type}</h3>
+                <h2 className="text-lg font-semibold mb-2">{type}</h2>
             </div>
             <div className="w-full text-left flex bg-white/20 backdrop-blur-lg rounded-lg border border-white/10 shadow-lg p-4">
                 {technologyChunks.map((chunk, columnIndex) => (

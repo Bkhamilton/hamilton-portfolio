@@ -93,29 +93,26 @@ export default function ParallaxEffects() {
     }, []);
 
     function getTopValue(planet: string) {
-        return useMemo(() => {
-            const currentPlanet = planets.find(p => p.name === planet);
-            if (!currentPlanet) return "0%";
-    
-            switch (planet) {
-                case "astronaut":
-                    return `${currentPlanet.top - scrollY * 0.0027}%`; // Moves up instead of down
-                case "uranus":
-                    return `${currentPlanet.top - scrollY * 0.006}%`
-                case "neptune":
-                    return `${currentPlanet.top - scrollY * 0.0014}%`
-                case "mars":
-                    return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
-                case "moon":
-                    return `${currentPlanet.top - scrollY * 0.06}%`; // Parallax effect for jupiter
-                case "asteroid":
-                    return `${currentPlanet.top - scrollY * 0.06}%`;
-                case "space_station":
-                    return `${currentPlanet.top - scrollY * 0.03}%`; // Parallax effect for space station
-                default:
-                    return `${currentPlanet.top}%`; // Default case (no parallax effect)
-            }
-        }, [planet, scrollY]);
+        const currentPlanet = planets.find(p => p.name === planet);
+        if (!currentPlanet) return "0%"; // Fallback if planet not found
+        switch (planet) {
+            case "astronaut":
+                return `${currentPlanet.top - scrollY * 0.0027}%`; // Moves up instead of down
+            case "uranus":
+                return `${currentPlanet.top - scrollY * 0.006}%`
+            case "neptune":
+                return `${currentPlanet.top - scrollY * 0.0014}%`
+            case "mars":
+                return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
+            case "moon":
+                return `${currentPlanet.top - scrollY * 0.06}%`; // Parallax effect for jupiter
+            case "asteroid":
+                return `${currentPlanet.top - scrollY * 0.06}%`;
+            case "space_station":
+                return `${currentPlanet.top - scrollY * 0.03}%`; // Parallax effect for space station
+            default:
+                return `${currentPlanet.top}%`; // Default case (no parallax effect)
+        }
     }
 
     function getLeftValue(planet: Planet) {

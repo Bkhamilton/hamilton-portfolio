@@ -4,7 +4,7 @@
         "date": "2024-Present",
         "description": "A web application for smarter betting strategies.",
         "longDescription": "Transform your sports betting approach with BetSmarter – your personal analytics companion that helps turn betting insights into smarter decisions.\n\nIn today's $140+ billion sports betting market, bettors need more than just gut feelings to succeed. BetSmarter serves as your intelligent companion, providing crucial analysis of your betting patterns and actionable insights to help you make more informed decisions. While sportsbooks focus on taking your bets, we focus on understanding them.\n\nAt the heart of BetSmarter is a comprehensive dashboard that puts your betting activity front and center. Track your open bets, monitor recent results, and get a clear picture of your betting portfolio all in one place. Our intuitive Home Page gives you the critical information you need at a glance.\n\nThe Insights page is where BetSmarter truly shines. Our advanced analytics tools include a Streak Detector that identifies your hot and cold periods, a Bankroll Manager to help maintain betting discipline, and a detailed Bet Analysis system. Whether you're winning or losing, BetSmarter breaks down the patterns and provides actionable lessons to improve your strategy.\n\nRecording your bets is seamless with our Bet Placing interface, designed to mirror the familiar layout of popular sportsbooks. Simply input your bets from any platform, and BetSmarter handles the rest – tracking, analyzing, and providing insights on every wager.\n\nDive deeper with our Data page, offering comprehensive statistics on bookmakers, teams, and players. This wealth of information helps you make data-driven decisions rather than relying on instinct alone. Your personalized Profile Page keeps all your preferences and settings in one convenient location, ensuring BetSmarter adapts to your unique betting style.",
-        "link": "https://betsmarter.com",
+        "link": "https://github.com/Bkhamilton/BetSmart",
         "image": "/logos/BetSmarter.png"
     },
     "Game%20Library": {
@@ -12,7 +12,7 @@
         "date": "2025",
         "description": "A library of mobile games for iOS and Android, built with React Native.",
         "longDescription": "Game Library is a collection of fun and engaging mobile games designed for players of all ages.",
-        "link": "https://gamelibrary.com",
+        "link": "https://github.com/Bkhamilton/game-library",
         "image": "/logos/GameLibrary.png"
     },
     "BudJournal": {
@@ -20,7 +20,7 @@
         "date": "2024",
         "description": "A journal application for tracking cannabis strains and effects, built with React and Firebase.",
         "longDescription": "BudJournal allows users to log their cannabis experiences, helping them find the perfect strain for their needs.",
-        "link": "https://budjournal.com",
+        "link": "https://github.com/Bkhamilton/BudJournal",
         "image": "/logos/BudJournal.png"
     },
     "Chloe%20Goodman%20Hair": {
@@ -28,7 +28,7 @@
         "date": "2025",
         "description": "A personal website for a hair stylist, showcasing her portfolio and services.",
         "longDescription": "Chloe Goodman Hair is a beautifully designed website that highlights the stylist's work and offers easy booking options.",
-        "link": "https://chloegoodmanhair.com",
+        "link": "https://chloe-goodman-hair.vercel.app/",
         "image": "/logos/ChloeGoodmanHair.png"
     }
 }

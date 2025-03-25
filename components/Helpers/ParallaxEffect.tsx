@@ -1,6 +1,6 @@
 "use client"; // Mark this as a Client Component
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 type Planet = {

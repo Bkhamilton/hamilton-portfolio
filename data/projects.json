@@ -7,7 +7,7 @@
         "link": "https://github.com/Bkhamilton/BetSmart",
         "image": "/logos/BetSmarter.png"
     },
-    "Game%20Library": {
+    "Game Library": {
         "title": "Game Library",
         "date": "2025",
         "description": "A library of mobile games for iOS and Android, built with React Native.",
@@ -23,12 +23,20 @@
         "link": "https://github.com/Bkhamilton/BudJournal",
         "image": "/logos/BudJournal.png"
     },
-    "Chloe%20Goodman%20Hair": {
+    "Chloe Goodman Hair": {
         "title": "Chloe Goodman Hair",
         "date": "2025",
         "description": "A personal website for a hair stylist, showcasing her portfolio and services.",
         "longDescription": "Chloe Goodman Hair is a beautifully designed website that highlights the stylist's work and offers easy booking options.",
         "link": "https://chloe-goodman-hair.vercel.app/",
         "image": "/logos/ChloeGoodmanHair.png"
+    },
+    "Double Double Website": {
+        "title": "Double Double Website",
+        "date": "2023",
+        "description": "The official website for the Double Double Podcast",
+        "longDescription": "The Double Double Website serves as the online hub for the Double Double Podcast, providing listeners with easy access to episodes, show notes, and additional content related to the podcast.",
+        "link": "https://double-double-website.vercel.app/",
+        "image": "/logos/DoubleDouble.jpg"
     }
 }

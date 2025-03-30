@@ -14,7 +14,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
 
     return (
         <div className="relative mb-8">
-            <Link href={`/my-projects/${encodeURIComponent(projectName)}`}>
+            <Link href={`/my-projects/${projectName.replace(/\s+/g, '-')}`}>
                 <h3
                     className="text-2xl font-bold text-left cursor-pointer"
                     onMouseEnter={() => setIsHovered(true)}

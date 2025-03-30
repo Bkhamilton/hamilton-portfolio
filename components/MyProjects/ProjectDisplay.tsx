@@ -35,7 +35,7 @@ const ProjectDisplay = ({ projectName }: { projectName: string }) => {
             </ul>
 
             {/* Why BetSmarter Section */}
-            <h2 className="text-2xl font-semibold mb-4 text-yellow-300">Why BetSmarter?</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-yellow-300">Why {project.title}?</h2>
             <p className="text-base">{project.why}</p>
         </div>
     );

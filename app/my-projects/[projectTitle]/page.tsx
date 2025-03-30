@@ -8,15 +8,15 @@ export type paramsType = Promise<{ projectTitle: string }>;
 // Generate static paths for all projects
 export async function generateStaticParams() {
     return Object.keys(projects).map((projectTitle) => ({
-        projectTitle,
-    }));
+        projectTitle: projectTitle.replace(/\s+/g, '-'), // Convert spaces to hyphens
+      }));
 }
 
 // Dynamic route component
-export default function ProjectDetails(props: { params: paramsType }) {
-    const { projectTitle } = React.use(props.params);
-
-    const project = projects[projectTitle as keyof typeof projects];
+export default async function ProjectDetails({ params }: { params: { projectTitle: string } }) {
+    // Extract the project title from the params and replace hyphens with spaces
+    const lookupTitle = params.projectTitle.replace(/-/g, ' ');
+    const project = projects[lookupTitle as keyof typeof projects];
 
     if (!project) {
         notFound(); // Show a 404 page if the project is not found

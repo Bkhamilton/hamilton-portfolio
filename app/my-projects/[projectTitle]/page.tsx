@@ -13,9 +13,10 @@ export async function generateStaticParams() {
 }
 
 // Dynamic route component
-export default async function ProjectDetails({ params }: { params: { projectTitle: string } }) {
+export default function ProjectDetails(props: { params: paramsType }) {
+    const { projectTitle } = React.use(props.params);
     // Extract the project title from the params and replace hyphens with spaces
-    const lookupTitle = params.projectTitle.replace(/-/g, ' ');
+    const lookupTitle = projectTitle.replace(/-/g, ' ');
     const project = projects[lookupTitle as keyof typeof projects];
 
     if (!project) {

@@ -1,5 +1,15 @@
 import React from 'react';
 import ProjectBox from './ProjectBox';
+import projects from '@/data/projects.json'
+
+type Project = {
+    title: string;
+    date: string;
+    description: string;
+    longDescription: string;
+    link: string;
+    image: string;
+};
 
 const Projects = () => {
     return (
@@ -10,26 +20,18 @@ const Projects = () => {
                     Here are some of the projects I have worked on:
                 </p>
                 <ul className="mt-6">
-                    <ProjectBox
-                        projectName="BetSmarter"
-                        date="2024-Present"
-                        projectDescription="A web application for smarter betting strategies."
-                    />
-                    <ProjectBox
-                        projectName="Game Library"
-                        date="2025"
-                        projectDescription='A library of mobile games for iOS and Android, built with React Native.'
-                    />
-                    <ProjectBox
-                        projectName='BudJournal'
-                        date='2024'
-                        projectDescription='A journal application for tracking cannabis strains and effects, built with React and Firebase.'
-                    />
-                    <ProjectBox
-                        projectName='Chloe Goodman Hair'
-                        date='2025'
-                        projectDescription='A personal website for a hair stylist, showcasing her portfolio and services.'
-                    />
+                        {Object.keys(projects).map((key) => {
+                            const typedProjects: Record<string, Project> = projects;
+                            const project = typedProjects[key];
+                            return (
+                                <ProjectBox
+                                    key={key} // Use the project key as a unique identifier
+                                    projectName={project.title}
+                                    date={project.date}
+                                    projectDescription={project.description}
+                                />
+                            );
+                        })}
                 </ul>
             </div>
         </section>

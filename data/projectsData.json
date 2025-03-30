@@ -111,6 +111,35 @@
             "why": "The website provides a professional online presence for Chloe Goodman, helping her connect with clients and grow her business.",
             "link": "https://chloe-goodman-hair.vercel.app/",
             "image": "/placeholder-image.jpg"
+        },
+        {
+            "id": "double-double-website",
+            "title": "Double Double Website",
+            "date": "2023",
+            "overview": "The Double Double website is a personal project that showcases my web development skills. It features a clean and modern design, with a focus on user experience and accessibility.",
+            "keyFeatures": [
+                {
+                    "title": "Clean and Modern Design",
+                    "description": "The website features a sleek and contemporary design that is visually appealing."
+                },
+                {
+                    "title": "User Experience Focus",
+                    "description": "Prioritizes ease of navigation and accessibility for all users."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Frontend",
+                    "description": "Built with Next.js and Tailwind CSS for a fast and responsive user interface."
+                },
+                {
+                    "title": "Deployment",
+                    "description": "Deployed on Vercel for reliable hosting and performance."
+                }
+            ],
+            "why": "The Double Double website serves as a platform to demonstrate my web development capabilities, showcasing my commitment to quality design and user-centric functionality. It also acts as a portfolio piece for potential clients and employers to see my work.",
+            "link": "https://double-double.vercel.app/",
+            "image": "/logos/DoubleDouble.JPG"
         }
     ]
 }

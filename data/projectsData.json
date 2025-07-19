@@ -50,6 +50,39 @@
             "image": "/logos/BetSmarter.png"
         },
         {
+            "id": "tracklifts",
+            "title": "TrackLifts",
+            "date": "2024",
+            "overview": "TrackLifts is a comprehensive platform designed to help weightlifters of all levels monitor their progress, set goals, and stay motivated. With an intuitive interface, users can easily log their workouts, track their lifts, and visualize their performance over time.",
+            "keyFeatures": [
+                {
+                    "title": "User-Friendly Dashboard",
+                    "description": "Displays recent workouts, personal records, and progress charts for easy tracking."
+                },
+                {
+                    "title": "Custom Workout Plans",
+                    "description": "Allows users to create and log custom workout plans with detailed notes."
+                },
+                {
+                    "title": "Muscle Soreness Tracking",
+                    "description": "Allows users to log and track muscle soreness levels after workouts."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Frontend",
+                    "description": "Built with React for a responsive and dynamic user interface."
+                },
+                {
+                    "title": "Backend",
+                    "description": "Utilizes Local SQLite for secure data storage and real-time updates."
+                }
+            ],
+            "why": "TrackLifts aims to empower weightlifters by providing them with the tools they need to track their progress and achieve their fitness goals.",
+            "link": "https://github.com/Bkhamilton/TrackLifts",
+            "image": "/logos/TrackLifts.png"
+        },
+        {
             "id": "game-library",
             "title": "Game Library",
             "date": "2025",

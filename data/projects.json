@@ -7,6 +7,14 @@
         "link": "https://github.com/Bkhamilton/BetSmart",
         "image": "/logos/BetSmarter.png"
     },
+    "TrackLifts": {
+        "title": "TrackLifts",
+        "date": "2024",
+        "description": "A web application for tracking weightlifting progress.",
+        "longDescription": "TrackLifts is a comprehensive platform designed to help weightlifters of all levels monitor their progress, set goals, and stay motivated. With an intuitive interface, users can easily log their workouts, track their lifts, and visualize their performance over time.\n\nThe application features a user-friendly dashboard that displays recent workouts, personal records, and progress charts. Users can create custom workout plans, log their lifts with detailed notes, and even share their achievements with friends.\n\nTrackLifts also includes a community feature where users can connect with fellow lifters, share tips, and motivate each other. Whether you're a beginner or an experienced athlete, TrackLifts provides the tools you need to take your weightlifting journey to the next level.",
+        "link": "https://github.com/Bkhamilton/TrackLifts",
+        "image": "/logos/TrackLifts.png"
+    },
     "Game Library": {
         "title": "Game Library",
         "date": "2025",

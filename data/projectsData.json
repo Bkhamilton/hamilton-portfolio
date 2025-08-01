@@ -83,6 +83,35 @@
             "image": "/logos/TrackLifts.png"
         },
         {
+            "id": "nba-analysis",
+            "title": "NBA Analysis",
+            "date": "2025",
+            "overview": "NBA Analysis is a cutting-edge web application that leverages machine learning and AI to predict outcomes of NBA games. By analyzing historical data, player statistics, and team performance, the application provides users with insights and predictions that can enhance their understanding of the game.",
+            "keyFeatures": [
+                {
+                    "title": "AI-Driven Predictions",
+                    "description": "Offers forecasts for game outcomes based on advanced machine learning algorithms."
+                },
+                {
+                    "title": "Detailed Player Statistics",
+                    "description": "Provides in-depth analysis of player performance and team matchups."
+                }
+            ],
+            "technicalImplementation": [
+                {
+                    "title": "Machine Learning",
+                    "description": "Utilizes Python and TensorFlow for building predictive models."
+                },
+                {
+                    "title": "Frontend",
+                    "description": "Developed with React for a modern and interactive user experience."
+                }
+            ],
+            "why": "NBA Analysis serves as a valuable resource for fans and analysts alike, offering data-driven insights to enhance their understanding of the game.",
+            "link": "https://github.com/Bkhamilton/NBA-Analysis",
+            "image": "/logos/NBAAnalysis.png"
+        },
+        {
             "id": "game-library",
             "title": "Game Library",
             "date": "2025",

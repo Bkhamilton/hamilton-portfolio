@@ -15,6 +15,14 @@
         "link": "https://github.com/Bkhamilton/TrackLifts",
         "image": "/logos/TrackLifts.png"
     },
+    "NBA Analysis": {
+        "title": "NBA Analysis",
+        "date": "2025",
+        "description": "A web application for predicting NBA outcomes using machine learning.",
+        "longDescription": "NBA Analysis is a cutting-edge web application that leverages machine learning and AI to predict outcomes of NBA games. By analyzing historical data, player statistics, and team performance, the application provides users with insights and predictions that can enhance their understanding of the game.\n\nThe platform features a sleek interface where users can view upcoming games, analyze team matchups, and explore detailed player statistics. The AI-driven prediction engine offers forecasts for game outcomes, helping fans and analysts alike make informed decisions.\n\nNBA Analysis also includes a community section where users can discuss predictions, share insights, and engage with fellow basketball enthusiasts. Whether you're a casual fan or a serious analyst, NBA Analysis is your go-to resource for NBA predictions.",
+        "link": "https://github.com/Bkhamilton/NBA-Analysis",
+        "image": "/logos/NBAAnalysis.png"
+    },
     "Game Library": {
         "title": "Game Library",
         "date": "2025",

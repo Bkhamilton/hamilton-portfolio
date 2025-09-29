@@ -18,6 +18,12 @@ const Experience = () => {
                     startTime="Jan 2023" 
                     endTime="May 2023" 
                 />
+                <WorkExperience
+                    companyName="Hamilton Development Studios"
+                    jobTitle="Founder/iOS Developer"
+                    startTime="Jan 2024"
+                    endTime="Current"
+                />
             </div>
         </section>
     );

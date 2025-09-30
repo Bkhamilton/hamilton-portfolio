@@ -19,10 +19,10 @@ export default function Home() {
                 <section id="intro" className="md:h-screen w-full">
                     <Intro />
                 </section>
-                <section id="about-me" className="md:h-screen w-full">
+                <section id="about-me" className="md:min-h-screen w-full">
                     <Services />
                 </section>
-                <section id="my-stack" className="md:h-screen w-full">
+                <section id="my-stack" className="md:min-h-screen w-full">
                     <MyStack />
                 </section>
 

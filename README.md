@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ben Hamilton - Software Developer Portfolio 👋
 
-## Getting Started
+Welcome to my portfolio repository! I'm Ben Hamilton, a passionate software developer specializing in creating beautiful and functional web and mobile applications.
 
-First, run the development server:
+🌐 **[View Live Portfolio](https://hamilton-portfolio.vercel.app/)**
+
+## About Me
+
+I'm a full-stack software developer with a passion for building innovative solutions that make a difference. My expertise spans across web development, mobile applications, and user experience design. I love tackling challenging problems and turning ideas into reality.
+
+📧 **Get in touch:** [bkhamilton310@gmail.com](mailto:bkhamilton310@gmail.com)  
+💼 **LinkedIn:** [linkedin.com/in/benkhamilton](https://www.linkedin.com/in/benkhamilton/)  
+🐙 **GitHub:** [github.com/Bkhamilton](https://github.com/Bkhamilton)
+
+## What I Do
+
+- **Front End Development** - Building responsive and dynamic web applications
+- **Back End Development** - Creating robust server-side applications
+- **Mobile Development** - Crafting mobile apps for iOS and Android
+- **UI/UX Design** - Designing user-friendly and visually appealing interfaces
+- **Content Management** - Managing and optimizing content systems
+- **Full Stack Development** - End-to-end application development
+
+## Tech Stack
+
+### Front End
+JavaScript • TypeScript • React • React Native • Next.js • Tailwind CSS • HTML • CSS
+
+### Back End
+Node.js • Express • GraphQL • Python
+
+### Database & CMS
+MongoDB • PostgreSQL • MySQL • Firebase • Contentful CMS
+
+### Tools & Platforms
+Git • AWS • Tableau
+
+## Features
+
+This portfolio showcases:
+- 🎨 Modern, responsive design with glassmorphism effects
+- ⭐ Interactive parallax and star field animations
+- 📱 Mobile-first approach with seamless cross-device experience
+- 🚀 Fast performance with Next.js 15 and React 19
+- 💼 Professional work experience and project highlights
+- 📄 Downloadable resume
+
+## Local Development
+
+Want to run this project locally? Here's how:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Bkhamilton/hamilton-portfolio.git
+   cd hamilton-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the portfolio in action!
+
+## Building for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/app` - Next.js app directory with pages and layouts
+- `/components` - Reusable React components
+- `/public` - Static assets including images and resume
+- `/data` - Portfolio data and content
+- `/constants` - Application constants
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+This portfolio is built with modern web technologies:
+- **Framework:** [Next.js 15](https://nextjs.org)
+- **UI Library:** [React 19](https://react.dev)
+- **Language:** [TypeScript](https://www.typescriptlang.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment:** [Vercel](https://vercel.com)
 
-To learn more about Next.js, take a look at the following resources:
+## Let's Connect!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I'm always interested in connecting with fellow developers, potential clients, or anyone looking to collaborate on exciting projects. Feel free to reach out through any of the channels above!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Ben Hamilton

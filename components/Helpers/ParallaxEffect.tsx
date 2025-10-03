@@ -61,8 +61,8 @@ const planets = [
     },
     {
         name: "moon",
-        top: 310,
-        left: 10,
+        top: 110,
+        left: 30,
         opacity: 0.4,
         size: "65px",
         animation: "",
@@ -70,8 +70,8 @@ const planets = [
     },
     {
         name: 'space_station',
-        top: 150,
-        left: -50,
+        top: 50,
+        left: 15,
         opacity: 0.8,
         size: '55px',
         animation: '',
@@ -126,13 +126,13 @@ export default function ParallaxEffects() {
         let parallaxFactor = 0;
         switch (planet) {
             case "astronaut":
-                parallaxFactor = 0.0027;
+                parallaxFactor = 0.02;
                 break;
             case "uranus":
-                parallaxFactor = 0.006;
+                parallaxFactor = 0.012;
                 break;
             case "neptune":
-                parallaxFactor = 0.0014;
+                parallaxFactor = 0.005;
                 break;
             case "mars":
                 parallaxFactor = 0.01;
@@ -155,7 +155,7 @@ export default function ParallaxEffects() {
 
     function getLeftOffset(planet: string, currentScrollY: number): number {
         if (planet === 'space_station') {
-            return currentScrollY * 0.04;
+            return currentScrollY * 0.4;
         }
         return 0;
     }

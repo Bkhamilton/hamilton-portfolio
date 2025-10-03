@@ -1,6 +1,6 @@
 "use client"; // Mark this as a Client Component
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
 type Planet = {
@@ -81,68 +81,109 @@ const planets = [
 
 export default function ParallaxEffects() {
     const [selectedPlanets,] = useState<Planet[]>(planets);
-    const [scrollY, setScrollY] = useState<number>(0);
+    const scrollY = useRef<number>(0);
+    const rafId = useRef<number | null>(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
+        const updateParallax = () => {
+            scrollY.current = window.scrollY;
+            
+            // Update positions for each planet
+            selectedPlanets.forEach((planet, index) => {
+                const element = document.getElementById(`planet-${index}`);
+                if (element) {
+                    const topOffset = getTopOffset(planet.name, scrollY.current);
+                    const leftOffset = getLeftOffset(planet.name, scrollY.current);
+                    const size = getSize(planet);
+                    
+                    element.style.transform = `translate(${leftOffset}px, ${topOffset}px)`;
+                    if (planet.name === "space_station") {
+                        const img = element.querySelector('img');
+                        if (img) {
+                            img.style.width = size;
+                            img.style.height = size;
+                        }
+                    }
+                }
+            });
+            
+            rafId.current = requestAnimationFrame(updateParallax);
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        rafId.current = requestAnimationFrame(updateParallax);
+        
+        return () => {
+            if (rafId.current !== null) {
+                cancelAnimationFrame(rafId.current);
+            }
+        };
+    }, [selectedPlanets]);
+
+    function getTopOffset(planet: string, currentScrollY: number): number {
+        const currentPlanet = planets.find(p => p.name === planet);
+        if (!currentPlanet) return 0;
+        
+        let parallaxFactor = 0;
+        switch (planet) {
+            case "astronaut":
+                parallaxFactor = 0.0027;
+                break;
+            case "uranus":
+                parallaxFactor = 0.006;
+                break;
+            case "neptune":
+                parallaxFactor = 0.0014;
+                break;
+            case "mars":
+                parallaxFactor = 0.01;
+                break;
+            case "moon":
+                parallaxFactor = 0.06;
+                break;
+            case "asteroid":
+                parallaxFactor = 0.06;
+                break;
+            case "space_station":
+                parallaxFactor = 0.03;
+                break;
+            default:
+                parallaxFactor = 0;
+        }
+        
+        return -currentScrollY * parallaxFactor;
+    }
+
+    function getLeftOffset(planet: string, currentScrollY: number): number {
+        if (planet === 'space_station') {
+            return currentScrollY * 0.04;
+        }
+        return 0;
+    }
 
     function getTopValue(planet: string) {
         const currentPlanet = planets.find(p => p.name === planet);
-        if (!currentPlanet) return "0%"; // Fallback if planet not found
-        switch (planet) {
-            case "astronaut":
-                return `${currentPlanet.top - scrollY * 0.0027}%`; // Moves up instead of down
-            case "uranus":
-                return `${currentPlanet.top - scrollY * 0.006}%`
-            case "neptune":
-                return `${currentPlanet.top - scrollY * 0.0014}%`
-            case "mars":
-                return `${currentPlanet.top - scrollY * 0.01}%`; // Parallax effect for other planets
-            case "moon":
-                return `${currentPlanet.top - scrollY * 0.06}%`; // Parallax effect for jupiter
-            case "asteroid":
-                return `${currentPlanet.top - scrollY * 0.06}%`;
-            case "space_station":
-                return `${currentPlanet.top - scrollY * 0.03}%`; // Parallax effect for space station
-            default:
-                return `${currentPlanet.top}%`; // Default case (no parallax effect)
-        }
+        if (!currentPlanet) return "0%";
+        return `${currentPlanet.top}%`;
     }
 
     function getLeftValue(planet: Planet) {
-        if (planet.name === 'space_station') {
-            return planet.left + (scrollY * 0.04) + "%"; // Moves right instead of left
-        } else {
-            return planet.left + '%';
-        }
+        return planet.left + '%';
     }
 
     function getSize(planet: Planet): string {
         if (planet.name === "space_station") {
-            // Define the size range
-            const maxSize = 55; // Maximum size in pixels
-            const minSize = 35; // Minimum size in pixels
-            const shrinkStartScroll = 2700; // Threshold: Start shrinking after 200px of scroll
+            const maxSize = 55;
+            const minSize = 35;
+            const shrinkStartScroll = 2700;
     
-            // If scrollY is less than the threshold, return the max size
-            if (scrollY < shrinkStartScroll) {
+            if (scrollY.current < shrinkStartScroll) {
                 return `${maxSize}px`;
             }
     
-            // Calculate the size based on scrollY, subtracting the threshold
-            const size = maxSize - ((scrollY - shrinkStartScroll) * 0.03); // Adjust the shrinking rate (0.03 is the rate of shrinkage)
-    
-            // Clamp the size between minSize and maxSize
+            const size = maxSize - ((scrollY.current - shrinkStartScroll) * 0.03);
             return `${Math.max(minSize, Math.min(size, maxSize))}px`;
         }
     
-        // Default size for other planets
         return planet.size;
     }
 
@@ -153,26 +194,28 @@ export default function ParallaxEffects() {
                 {selectedPlanets.map((planet, index) => (
                     <div
                         key={index}
+                        id={`planet-${index}`}
                         className="planet-wrapper"
                         style={{
                             position: "absolute",
-                            top: getTopValue(planet.name), // Parallax effect
-                            left: getLeftValue(planet), // Fixed position for left
-                            width: getSize(planet), // Adjust size as needed
+                            top: getTopValue(planet.name),
+                            left: getLeftValue(planet),
+                            width: getSize(planet),
                             height: "auto",
-                            opacity: planet.opacity, // Random value between 0.4 and 0.8
-                            willChange: planet.animation ? "transform, opacity" : undefined, // Optimize for performance
+                            opacity: planet.opacity,
+                            willChange: "transform",
+                            transition: "none",
                         }}
                     >
                         <Image
                             src={planet.fileName}
                             alt={planet.name}
-                            width={parseInt(planet.size)} // Convert size to number for width
-                            height={parseInt(planet.size)} // Convert size to number for height
+                            width={parseInt(planet.size)}
+                            height={parseInt(planet.size)}
                             className="planet"
                             style={{
-                                objectFit: "contain", // Ensure the image fits properly
-                                animation: planet.animation, // Animation for planets
+                                objectFit: "contain",
+                                animation: planet.animation,
                             }}
                             loading="lazy"
                         />

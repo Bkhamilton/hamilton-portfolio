@@ -13,13 +13,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ projectName, date, projectDescr
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="relative mb-8">
+        <div 
+            className="relative mb-8"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <Link href={`/my-projects/${projectName.replace(/\s+/g, '-')}`}>
-                <h3
-                    className="text-2xl font-bold text-left cursor-pointer"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
+                <h3 className="text-2xl font-bold text-left cursor-pointer">
                     {projectName}
                 </h3>
             </Link>

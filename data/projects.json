@@ -1,12 +1,4 @@
 {
-    "BetSmarter": {
-        "title": "BetSmarter",
-        "date": "2024-Present",
-        "description": "A web application for smarter betting strategies.",
-        "longDescription": "Transform your sports betting approach with BetSmarter – your personal analytics companion that helps turn betting insights into smarter decisions.\n\nIn today's $140+ billion sports betting market, bettors need more than just gut feelings to succeed. BetSmarter serves as your intelligent companion, providing crucial analysis of your betting patterns and actionable insights to help you make more informed decisions. While sportsbooks focus on taking your bets, we focus on understanding them.\n\nAt the heart of BetSmarter is a comprehensive dashboard that puts your betting activity front and center. Track your open bets, monitor recent results, and get a clear picture of your betting portfolio all in one place. Our intuitive Home Page gives you the critical information you need at a glance.\n\nThe Insights page is where BetSmarter truly shines. Our advanced analytics tools include a Streak Detector that identifies your hot and cold periods, a Bankroll Manager to help maintain betting discipline, and a detailed Bet Analysis system. Whether you're winning or losing, BetSmarter breaks down the patterns and provides actionable lessons to improve your strategy.\n\nRecording your bets is seamless with our Bet Placing interface, designed to mirror the familiar layout of popular sportsbooks. Simply input your bets from any platform, and BetSmarter handles the rest – tracking, analyzing, and providing insights on every wager.\n\nDive deeper with our Data page, offering comprehensive statistics on bookmakers, teams, and players. This wealth of information helps you make data-driven decisions rather than relying on instinct alone. Your personalized Profile Page keeps all your preferences and settings in one convenient location, ensuring BetSmarter adapts to your unique betting style.",
-        "link": "https://github.com/Bkhamilton/BetSmart",
-        "image": "/logos/BetSmarter.png"
-    },
     "TrackLifts": {
         "title": "TrackLifts",
         "date": "2024",
@@ -15,14 +7,6 @@
         "link": "https://github.com/Bkhamilton/TrackLifts",
         "image": "/logos/TrackLifts.png"
     },
-    "NBA Analysis": {
-        "title": "NBA Analysis",
-        "date": "2025",
-        "description": "A web application for predicting NBA outcomes using machine learning.",
-        "longDescription": "NBA Analysis is a cutting-edge web application that leverages machine learning and AI to predict outcomes of NBA games. By analyzing historical data, player statistics, and team performance, the application provides users with insights and predictions that can enhance their understanding of the game.\n\nThe platform features a sleek interface where users can view upcoming games, analyze team matchups, and explore detailed player statistics. The AI-driven prediction engine offers forecasts for game outcomes, helping fans and analysts alike make informed decisions.\n\nNBA Analysis also includes a community section where users can discuss predictions, share insights, and engage with fellow basketball enthusiasts. Whether you're a casual fan or a serious analyst, NBA Analysis is your go-to resource for NBA predictions.",
-        "link": "https://github.com/Bkhamilton/NBA-Analysis",
-        "image": "/logos/NBAAnalysis.png"
-    },
     "Game Library": {
         "title": "Game Library",
         "date": "2025",
@@ -30,6 +14,14 @@
         "longDescription": "Game Library is a collection of fun and engaging mobile games designed for players of all ages.",
         "link": "https://github.com/Bkhamilton/game-library",
         "image": "/logos/GameLibrary.png"
+    },
+    "BetSmarter": {
+        "title": "BetSmarter",
+        "date": "2024-Present",
+        "description": "A web application for smarter betting strategies.",
+        "longDescription": "Transform your sports betting approach with BetSmarter – your personal analytics companion that helps turn betting insights into smarter decisions.\n\nIn today's $140+ billion sports betting market, bettors need more than just gut feelings to succeed. BetSmarter serves as your intelligent companion, providing crucial analysis of your betting patterns and actionable insights to help you make more informed decisions. While sportsbooks focus on taking your bets, we focus on understanding them.\n\nAt the heart of BetSmarter is a comprehensive dashboard that puts your betting activity front and center. Track your open bets, monitor recent results, and get a clear picture of your betting portfolio all in one place. Our intuitive Home Page gives you the critical information you need at a glance.\n\nThe Insights page is where BetSmarter truly shines. Our advanced analytics tools include a Streak Detector that identifies your hot and cold periods, a Bankroll Manager to help maintain betting discipline, and a detailed Bet Analysis system. Whether you're winning or losing, BetSmarter breaks down the patterns and provides actionable lessons to improve your strategy.\n\nRecording your bets is seamless with our Bet Placing interface, designed to mirror the familiar layout of popular sportsbooks. Simply input your bets from any platform, and BetSmarter handles the rest – tracking, analyzing, and providing insights on every wager.\n\nDive deeper with our Data page, offering comprehensive statistics on bookmakers, teams, and players. This wealth of information helps you make data-driven decisions rather than relying on instinct alone. Your personalized Profile Page keeps all your preferences and settings in one convenient location, ensuring BetSmarter adapts to your unique betting style.",
+        "link": "https://github.com/Bkhamilton/BetSmart",
+        "image": "/logos/BetSmarter.png"
     },
     "BudJournal": {
         "title": "BudJournal",
@@ -54,5 +46,13 @@
         "longDescription": "The Double Double Website serves as the online hub for the Double Double Podcast, providing listeners with easy access to episodes, show notes, and additional content related to the podcast.",
         "link": "https://double-double-website.vercel.app/",
         "image": "/logos/DoubleDouble.JPG"
+    },
+    "NBA Analysis": {
+        "title": "NBA Analysis",
+        "date": "2025",
+        "description": "A web application for predicting NBA outcomes using machine learning.",
+        "longDescription": "NBA Analysis is a cutting-edge web application that leverages machine learning and AI to predict outcomes of NBA games. By analyzing historical data, player statistics, and team performance, the application provides users with insights and predictions that can enhance their understanding of the game.\n\nThe platform features a sleek interface where users can view upcoming games, analyze team matchups, and explore detailed player statistics. The AI-driven prediction engine offers forecasts for game outcomes, helping fans and analysts alike make informed decisions.\n\nNBA Analysis also includes a community section where users can discuss predictions, share insights, and engage with fellow basketball enthusiasts. Whether you're a casual fan or a serious analyst, NBA Analysis is your go-to resource for NBA predictions.",
+        "link": "https://github.com/Bkhamilton/NBA-Analysis",
+        "image": "/logos/NBAAnalysis.png"
     }
 }

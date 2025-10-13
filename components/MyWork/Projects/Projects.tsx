@@ -29,6 +29,7 @@ const Projects = () => {
                                     projectName={project.title}
                                     date={project.date}
                                     projectDescription={project.description}
+                                    projectLink={project.link}
                                 />
                             );
                         })}

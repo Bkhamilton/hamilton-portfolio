@@ -2,6 +2,7 @@ import React from 'react';
 import { SiJavascript, SiTypescript, SiReact, SiPython } from "react-icons/si";
 import { SiNextdotjs, SiTailwindcss, SiCss3, SiExpress, SiGraphql } from "react-icons/si";
 import { SiPostgresql, SiFirebase, SiContentful, SiTableau } from "react-icons/si";
+import { SiSwift, SiDotnet, SiDjango, SiSupabase } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoIosGitBranch } from "react-icons/io";
 import { TiHtml5 } from "react-icons/ti";
@@ -24,14 +25,19 @@ const logoMapping: { [key: string]: React.ReactNode } = {
     "Tailwind": <SiTailwindcss className="text-blue-400" />,
     "CSS": <SiCss3 className="text-blue-500" />,
     "HTML": <TiHtml5 className="text-orange-500" />,
+    "Swift": <SiSwift className="text-orange-500" />,
+    "SwiftUI": <SiSwift className="text-blue-500" />,
     "Node.js": <FaNode className="text-green-500" />,
     "Express": <SiExpress className="text-white" />,
     "GraphQL": <SiGraphql className="text-purple-600" />,
+    ".NET": <SiDotnet className="text-purple-500" />,
+    "Django": <SiDjango className="text-green-700" />,
     "MongoDB": <DiMongodb className="text-green-600" />,
     "PostgreSQL": <SiPostgresql className="text-blue-700" />,
     "MySQL": <DiMysql className="text-blue-600" />,
     "Firebase": <SiFirebase className="text-yellow-500" />,
     "Contentful CMS": <SiContentful className="text-blue-600" />,
+    "Supabase": <SiSupabase className="text-green-500" />,
     "Git": <IoIosGitBranch className="text-orange-500" />,
     "AWS": <FaAws className="text-orange-500" />,
     "Tableau": <SiTableau className="text-blue-500" />,

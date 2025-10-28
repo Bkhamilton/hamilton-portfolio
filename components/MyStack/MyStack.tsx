@@ -13,15 +13,15 @@ const MyStack = () => {
                 <div className="text-left">
                     <TechStackBox 
                         type="Front End" 
-                        technologies={["JavaScript", "TypeScript", "React", "React Native", "Python", "Next.js", "Tailwind", "CSS", "HTML"]} 
+                        technologies={["JavaScript", "TypeScript", "React", "React Native", "Python", "Next.js", "Tailwind", "CSS", "HTML", "Swift", "SwiftUI"]} 
                     />
                     <TechStackBox 
                         type="Back End" 
-                        technologies={["Node.js", "Express", "GraphQL"]} 
+                        technologies={["Node.js", "Express", "GraphQL", ".NET", "Django"]} 
                     />
                     <TechStackBox 
                         type="Database" 
-                        technologies={["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Contentful CMS"]} 
+                        technologies={["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Contentful CMS", "Supabase"]} 
                     />
                     <TechStackBox 
                         type="Tools" 
